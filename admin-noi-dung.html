@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý nội dung · Quản trị An Nhiên</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin">
+    <!-- Thanh quản trị -->
+    <aside class="admin-sidebar">
+      <a href="admin-tong-quan.html" class="admin-brand">
+        <span>an nhiên</span>
+        <span>KHÔNG GIAN QUẢN TRỊ</span>
+      </a>
+      <nav class="admin-nav">
+        <a href="admin-tong-quan.html"><img src="assets/icons/admin-dashboard.svg" width="18" height="18" alt="">Tổng quan</a>
+        <a href="admin-dat-phong.html"><img src="assets/icons/admin-calendar.svg" width="18" height="18" alt="">Đặt phòng</a>
+        <a href="admin-phong-gia.html"><img src="assets/icons/admin-bed.svg" width="18" height="18" alt="">Phòng &amp; giá</a>
+        <a href="admin-noi-dung.html" class="active"><img src="assets/icons/admin-images.svg" width="18" height="18" alt="">Nội dung</a>
+      </nav>
+      <div class="admin-links">
+        <p class="tiny">KHÁCH SẠN AN NHIÊN</p>
+        <a href="index.html">↗ &nbsp;Xem website</a>
+        <a href="#">⚙ &nbsp;Cài đặt tài khoản</a>
+        <a href="dang-nhap.html">Đăng xuất</a>
+      </div>
+      <div class="admin-help">
+        <p class="small strong">Cần hỗ trợ vận hành?</p>
+        <p class="tiny">Hướng dẫn đặt phòng, cập nhật giá và quản lý nội dung.</p>
+        <a href="#" class="small">Xem hướng dẫn →</a>
+      </div>
+    </aside>
+
+    <!-- Không gian làm việc -->
+    <div class="workspace">
+      <header class="admin-topbar">
+        <p class="small muted">An Nhiên Hội An &nbsp;&nbsp; / &nbsp;&nbsp; Quản lý nội dung</p>
+        <div class="admin-account">
+          <button type="button" class="icon-btn" aria-label="Thông báo"><img src="assets/icons/bell.svg" width="19" height="19" alt=""></button>
+          <span class="small muted">05/11/2026</span>
+          <span class="avatar">ML</span>
+          <div class="admin-user">
+            <p class="small strong">Mai Linh</p>
+            <p class="admin-role">Quản trị viên</p>
+          </div>
+        </div>
+      </header>
+      <main class="admin-content">
+        <div class="admin-title">
+          <div>
+            <h1>Quản lý nội dung</h1>
+            <p class="meta-13">Chăm chút hình ảnh, dịch vụ và thông tin liên hệ trên website.</p>
+          </div>
+          <span class="badge badge-green">Đang hoạt động</span>
+        </div>
+
+        <div class="admin-toolbar">
+          <div class="chips gap-10" data-chips>
+            <a href="#thu-vien" class="btn btn-sm chip is-active">Hình ảnh (18)</a>
+            <a href="#dich-vu" class="btn btn-sm chip">Dịch vụ (5)</a>
+            <a href="#lien-he" class="btn btn-sm chip">Liên hệ &amp; tin nhắn (3)</a>
+          </div>
+          <a href="index.html" class="btn btn-outline btn-sm">↗ Xem website</a>
+        </div>
+
+        <section class="panel" id="thu-vien">
+          <div class="panel-head">
+            <h2>Thư viện hình ảnh</h2>
+            <span class="panel-link">Hiển thị 6 / 18 ảnh</span>
+          </div>
+          <div class="admin-toolbar">
+            <div class="text-tabs" data-tabs>
+              <button type="button" class="is-active">Tất cả</button>
+              <button type="button">Trang chủ</button>
+              <button type="button">Phòng nghỉ</button>
+              <button type="button">Dịch vụ</button>
+            </div>
+            <div class="toolbar-group">
+              <button type="button" class="btn btn-outline btn-sm">Sắp xếp ảnh</button>
+              <button type="button" class="btn btn-primary btn-sm">↑ Tải hình ảnh</button>
+            </div>
+          </div>
+          <div class="library">
+            <div class="library-grid-wrap">
+              <div class="library-grid">
+                <label class="media is-selected">
+                  <img src="assets/images/tv-san-vuon.jpg" alt="Sân vườn và hồ bơi">
+                  <span class="media-name"><b>Sân vườn &amp; hồ bơi</b><input type="checkbox" checked></span>
+                  <span class="media-meta">Trang chủ · Ảnh bìa</span>
+                </label>
+                <label class="media">
+                  <img src="assets/images/tv-deluxe-vuon.jpg" alt="Deluxe hướng vườn">
+                  <span class="media-name"><b>Deluxe hướng vườn</b><input type="checkbox"></span>
+                  <span class="media-meta">Phòng nghỉ · Đang hiển thị</span>
+                </label>
+                <label class="media">
+                  <img src="assets/images/tv-suite.jpg" alt="Suite ban công">
+                  <span class="media-name"><b>Suite ban công</b><input type="checkbox"></span>
+                  <span class="media-meta">Phòng nghỉ · Đang hiển thị</span>
+                </label>
+                <label class="media">
+                  <img src="assets/images/tv-bep-vuon.jpg" alt="Bếp Vườn An">
+                  <span class="media-name"><b>Bếp Vườn An</b><input type="checkbox"></span>
+                  <span class="media-meta">Dịch vụ · Đang hiển thị</span>
+                </label>
+                <label class="media">
+                  <img src="assets/images/tv-an-spa.jpg" alt="An Spa">
+                  <span class="media-name"><b>An Spa</b><input type="checkbox"></span>
+                  <span class="media-meta">Dịch vụ · Đang hiển thị</span>
+                </label>
+                <label class="media">
+                  <img src="assets/images/tv-pho-co.jpg" alt="Phố cổ Hội An">
+                  <span class="media-name"><b>Phố cổ Hội An</b><input type="checkbox"></span>
+                  <span class="media-meta">Trang chủ · Đang hiển thị</span>
+                </label>
+              </div>
+              <p class="tiny muted">JPG, PNG, WebP · Tối đa 10 MB / ảnh · Ảnh bìa nên từ 1920 × 1080 px</p>
+            </div>
+
+            <form class="side-editor" onsubmit="return false">
+              <p class="strong-14">Chỉnh sửa ảnh</p>
+              <p class="tiny muted">san-vuon-ho-boi.jpg · 2,4 MB</p>
+              <label class="field"><span class="field-label">Mô tả ảnh (ALT)</span><input class="input" type="text" value="Hồ bơi giữa vườn An Nhiên"></label>
+              <label class="field">
+                <span class="field-label">Vị trí sử dụng</span>
+                <select class="input select">
+                  <option>Trang chủ · Ảnh bìa</option>
+                  <option>Trang chủ · Thư viện</option>
+                  <option>Phòng nghỉ</option>
+                  <option>Dịch vụ</option>
+                </select>
+              </label>
+              <label class="toggle-row">
+                <span class="small">Hiển thị trên website</span>
+                <input type="checkbox" class="toggle-input" checked>
+                <span class="badge toggle-badge"></span>
+              </label>
+              <button type="submit" class="btn btn-primary btn-sm btn-block">Lưu thông tin ảnh</button>
+              <div class="panel-head tiny">
+                <button type="button" class="tiny">Thay ảnh</button>
+                <button type="button" class="tiny danger">Xóa ảnh</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="panel" id="dich-vu">
+          <div class="panel-head">
+            <h2>Quản lý dịch vụ</h2>
+            <button type="button" class="panel-link">+ Thêm dịch vụ</button>
+          </div>
+          <div class="library">
+            <div class="service-table">
+              <div class="table-wrap">
+                <table class="data-table" data-selectable>
+                  <thead>
+                    <tr><th style="width:180px">Dịch vụ</th><th style="width:155px">Giá từ (đã thuế)</th><th style="width:140px">Giờ hoạt động</th><th>Hiển thị</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td class="cell-strong">Bếp Vườn An</td><td>180.000 ₫</td><td>06:30 – 22:00</td><td>Đang hiển thị</td></tr>
+                    <tr class="is-selected"><td class="cell-strong">An Spa</td><td>650.000 ₫</td><td>09:00 – 21:00</td><td>Đang hiển thị</td></tr>
+                    <tr><td class="cell-strong">Hồ bơi giữa vườn</td><td>Miễn phí</td><td>06:00 – 21:00</td><td>Đang hiển thị</td></tr>
+                    <tr><td class="cell-strong">Tour Hội An</td><td>350.000 ₫</td><td>Theo lịch hẹn</td><td>Đang hiển thị</td></tr>
+                    <tr><td class="cell-strong">Đưa đón sân bay</td><td>350.000 ₫</td><td>24/7 · đặt trước</td><td>Đang hiển thị</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="tiny muted">Thứ tự hiển thị: Ẩm thực → Spa → Hồ bơi → Khám phá → Đưa đón</p>
+            </div>
+
+            <form class="side-editor gap-16" onsubmit="return false">
+              <div class="panel-head">
+                <p class="strong-14">Chỉnh sửa · An Spa</p>
+                <span class="badge badge-green">Đang hiển thị</span>
+              </div>
+              <label class="field"><span class="field-label">Tên dịch vụ *</span><input class="input" type="text" value="An Spa" required></label>
+              <div class="form-row gap-12">
+                <label class="field"><span class="field-label">Giá (VND) *</span><input class="input" type="text" value="650.000" inputmode="numeric" required></label>
+                <label class="field"><span class="field-label">Đơn vị</span><input class="input" type="text" value="Khách / 60 phút"></label>
+              </div>
+              <label class="field"><span class="field-label">Giờ phục vụ</span><input class="input" type="text" value="09:00 – 21:00 mỗi ngày"></label>
+              <p class="small muted">Massage thảo mộc 60 phút. Vui lòng đặt trước 2 giờ. Ảnh: an-spa.jpg</p>
+              <div class="panel-head">
+                <button type="button" class="small danger">Ẩn dịch vụ</button>
+                <button type="submit" class="btn btn-primary btn-sm">Lưu dịch vụ</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <div class="admin-row" id="lien-he">
+          <form class="panel edit-type" onsubmit="return false">
+            <div class="panel-head"><h2>Thông tin liên hệ trên website</h2></div>
+            <label class="field"><span class="field-label">Địa chỉ khách sạn *</span><input class="input" type="text" value="18 Nguyễn Du, phường Hội An, Đà Nẵng" required></label>
+            <div class="form-row gap-16">
+              <label class="field"><span class="field-label">Số điện thoại *</span><input class="input" type="tel" value="+84 (0)235 386 8888" required></label>
+              <label class="field"><span class="field-label">Email nhận yêu cầu *</span><input class="input" type="email" value="stay@annhienhoian.vn" required></label>
+            </div>
+            <label class="field">
+              <span class="field-label">Liên kết chỉ đường</span>
+              <span class="field-input">
+                <input type="text" value="Google Maps · An Nhiên Hội An">
+                <img src="assets/icons/external-link.svg" width="18" height="18" alt="">
+              </span>
+            </label>
+            <div class="form-row gap-16">
+              <label class="field"><span class="field-label">Facebook</span><input class="input" type="text" value="/annhienhoian"></label>
+              <label class="field"><span class="field-label">Instagram</span><input class="input" type="text" value="@annhienhoian"></label>
+            </div>
+            <p class="tiny muted">Thông tin được đồng bộ tại trang Liên hệ, chân trang và email xác nhận đặt phòng.</p>
+            <div class="panel-head">
+              <span class="tiny muted">Cập nhật lần cuối: 03/11/2026</span>
+              <button type="submit" class="btn btn-primary btn-sm">Lưu thông tin</button>
+            </div>
+          </form>
+
+          <section class="panel rooms-actual">
+            <div class="panel-head">
+              <h2>Yêu cầu liên hệ</h2>
+              <span class="panel-link">3 chưa xử lý</span>
+            </div>
+            <ul class="inbox">
+              <li>
+                <div class="panel-head"><p class="strong-13">Nguyễn Hoàng Minh</p><span class="badge badge-amber">Mới</span></div>
+                <p class="small">Đặt xe sân bay · AN26110508</p>
+                <div class="panel-head"><span class="tiny muted">Hôm nay, 09:38</span><a href="#" class="small strong">Xem &amp; trả lời →</a></div>
+              </li>
+              <li>
+                <div class="panel-head"><p class="strong-13">Trần Mai Anh</p><span class="badge badge-amber">Mới</span></div>
+                <p class="small">Tư vấn phòng cho gia đình</p>
+                <div class="panel-head"><span class="tiny muted">Hôm nay, 08:52</span><a href="#" class="small strong">Xem &amp; trả lời →</a></div>
+              </li>
+              <li>
+                <div class="panel-head"><p class="strong-13">Lê Thu Hương</p><span class="badge badge-grey">Đang xử lý</span></div>
+                <p class="small">Đặt bàn kỷ niệm ngày cưới</p>
+                <div class="panel-head"><span class="tiny muted">Hôm qua, 17:24</span><a href="#" class="small strong">Xem &amp; trả lời →</a></div>
+              </li>
+            </ul>
+            <p class="tiny muted">Phản hồi bằng email và đánh dấu đã xử lý để tránh bỏ sót yêu cầu của khách.</p>
+          </section>
+        </div>
+
+        <p class="admin-foot">An Nhiên · Hệ thống quản lý khách sạn &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Dữ liệu cập nhật lúc 09:41, 05/11/2026</p>
+      </main>
+
+      <script>
+        // Chọn chuyên mục, bộ lọc ảnh, ảnh và dịch vụ đang chỉnh sửa
+        const selectOne = (items, cls, onPick) => items.forEach((el) => el.addEventListener('click', () => {
+          items.forEach((x) => x.classList.remove(cls));
+          el.classList.add(cls);
+          if (onPick) onPick(el);
+        }));
+        selectOne(document.querySelectorAll('[data-chips] .chip'), 'is-active');
+        selectOne(document.querySelectorAll('[data-tabs] button'), 'is-active');
+        selectOne(document.querySelectorAll('.media'), 'is-selected');
+        selectOne(document.querySelectorAll('[data-selectable] tbody tr'), 'is-selected');
+      </script>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An Nhiên Hội An · Boutique Hotel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Điều hướng khách hàng -->
+  <header class="site-header">
+    <div class="topbar">
+      <p>Một chốn an yên, giữa lòng Hội An</p>
+      <p class="topbar-info">
+        <a href="tel:+842353868888">+84 (0)235 386 8888</a>
+        <span>•</span>
+        <a href="mailto:stay@annhienhoian.vn">stay@annhienhoian.vn</a>
+        <span>|</span>
+        <button type="button" class="lang">Tiếng Việt⌄</button>
+      </p>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <span class="brand-name">an nhiên</span>
+        <span class="brand-tag">HỘI AN · BOUTIQUE HOTEL</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Trang chủ</a>
+        <a href="tim-phong.html">Phòng nghỉ</a>
+        <a href="dich-vu.html">Dịch vụ</a>
+        <a href="lien-he.html">Liên hệ</a>
+        <a href="dang-nhap.html" class="nav-login">Đăng nhập</a>
+        <a href="tim-phong.html" class="btn btn-primary">Đặt phòng</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Lời chào An Nhiên -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/images/hero-san-vuon.jpg" alt="Sân vườn An Nhiên">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow eyebrow-light">AN NHIÊN HỘI AN · KHÁCH SẠN BOUTIQUE</p>
+        <h1>Chậm lại một nhịp,<br>vẹn nguyên một kỳ nghỉ.</h1>
+        <p class="hero-lead">Giữa vườn xanh và những mái ngói Hội An, một không gian ấm áp đang đợi bạn trở về.</p>
+        <div class="hero-actions">
+          <a href="tim-phong.html" class="btn btn-light">Khám phá phòng nghỉ →</a>
+          <span>Cách phố cổ 5 phút đi bộ</span>
+        </div>
+      </div>
+      <div class="hero-indicator">
+        <span>01 / 03</span>
+        <button type="button" aria-label="Ảnh trước">←</button>
+        <button type="button" aria-label="Ảnh sau">→</button>
+      </div>
+    </section>
+
+    <!-- Đặt kỳ nghỉ -->
+    <section class="booking" id="dat-phong">
+      <form class="booking-card" action="tim-phong.html">
+        <label class="field">
+          <span class="field-label">Ngày nhận phòng</span>
+          <span class="field-input">
+            <input type="text" value="12/11/2026">
+            <img src="assets/icons/calendar-days.svg" width="18" height="18" alt="">
+          </span>
+        </label>
+        <label class="field">
+          <span class="field-label">Ngày trả phòng</span>
+          <span class="field-input">
+            <input type="text" value="15/11/2026">
+            <img src="assets/icons/calendar-days.svg" width="18" height="18" alt="">
+          </span>
+        </label>
+        <label class="field">
+          <span class="field-label">Khách &amp; phòng</span>
+          <span class="field-input">
+            <input type="text" value="2 người lớn · 1 phòng">
+            <img src="assets/icons/chevron-down.svg" width="18" height="18" alt="">
+          </span>
+        </label>
+        <button type="submit" class="btn btn-primary">Tìm phòng trống →</button>
+      </form>
+      <ul class="promises">
+        <li>✓ Giá tốt nhất khi đặt trực tiếp</li>
+        <li>✓ Bữa sáng mỗi ngày</li>
+        <li>✓ Xác nhận tức thì</li>
+        <li>✓ Thanh toán an toàn</li>
+      </ul>
+    </section>
+
+    <!-- Câu chuyện và phòng nghỉ -->
+    <section class="section stack-72">
+      <div class="story">
+        <img class="story-img" src="assets/images/cau-chuyen.jpg" alt="Khách sạn An Nhiên">
+        <div class="story-text">
+          <p class="eyebrow">MỘT CHỐN DỪNG CHÂN, MỘT CẢM GIÁC THUỘC VỀ</p>
+          <h2 class="h-39">Nét Hội An mộc mạc.<br>Sự chăm chút từ trái tim.</h2>
+          <p class="body-15">Ẩn mình bên dòng Hoài, An Nhiên là ngôi nhà của 32 phòng nghỉ ngập ánh sáng, những khoảng vườn xanh và lòng hiếu khách chân thành. Không ồn ào, không vội vã — chỉ có bạn và một kỳ nghỉ thật trọn vẹn.</p>
+          <div class="stats">
+            <div><strong>32</strong><span>phòng nghỉ riêng tư</span></div>
+            <div><strong>4,9/5</strong><span>từ 286 đánh giá</span></div>
+            <div><strong>5 phút</strong><span>đi bộ đến phố cổ</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rooms" id="phong-nghi">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">KHÔNG GIAN DÀNH RIÊNG CHO BẠN</p>
+            <h2 class="h-40">Mở cửa đón một ngày an yên</h2>
+          </div>
+          <a href="tim-phong.html" class="btn btn-outline">Tất cả phòng nghỉ →</a>
+        </div>
+        <div class="grid-3">
+          <article class="room-card">
+            <img src="assets/images/phong-deluxe-vuon.jpg" alt="Deluxe hướng vườn">
+            <div class="room-info">
+              <h3>Deluxe hướng vườn</h3>
+              <p class="room-meta">36 m² · 2 người lớn · 1 giường King</p>
+              <p class="room-amenities">Bữa sáng · Hồ bơi · Wi-Fi miễn phí</p>
+              <div class="room-foot">
+                <div class="price"><span>Từ / đêm, chưa gồm thuế</span><strong>1.800.000 ₫</strong></div>
+                <a href="chi-tiet-phong.html" class="link">Xem phòng ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="room-card">
+            <img src="assets/images/phong-deluxe-hai-giuong.jpg" alt="Deluxe hai giường">
+            <div class="room-info">
+              <h3>Deluxe hai giường</h3>
+              <p class="room-meta">36 m² · 2 người lớn · 2 giường đơn</p>
+              <p class="room-amenities">Bữa sáng · Hồ bơi · Wi-Fi miễn phí</p>
+              <div class="room-foot">
+                <div class="price"><span>Từ / đêm, chưa gồm thuế</span><strong>1.800.000 ₫</strong></div>
+                <a href="chi-tiet-phong.html" class="link">Xem phòng ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="room-card">
+            <img src="assets/images/phong-suite-ban-cong.jpg" alt="Suite ban công">
+            <div class="room-info">
+              <h3>Suite ban công</h3>
+              <p class="room-meta">58 m² · 2 người lớn, 1 trẻ em · 1 King</p>
+              <p class="room-amenities">Bữa sáng · Hồ bơi · Wi-Fi miễn phí</p>
+              <div class="room-foot">
+                <div class="price"><span>Từ / đêm, chưa gồm thuế</span><strong>2.900.000 ₫</strong></div>
+                <a href="chi-tiet-phong.html" class="link">Xem phòng ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <ul class="amenities">
+        <li><img src="assets/icons/waves.svg" width="24" height="24" alt="">Hồ bơi giữa vườn</li>
+        <li><img src="assets/icons/utensils.svg" width="24" height="24" alt="">Bữa sáng bản địa</li>
+        <li><img src="assets/icons/bike.svg" width="24" height="24" alt="">Xe đạp miễn phí</li>
+        <li><img src="assets/icons/wifi.svg" width="24" height="24" alt="">Kết nối Wi-Fi</li>
+        <li><img src="assets/icons/concierge-bell.svg" width="24" height="24" alt="">Lễ tân 24/7</li>
+      </ul>
+    </section>
+
+    <!-- Dịch vụ nổi bật -->
+    <section class="section services" id="dich-vu">
+      <div class="section-title">
+        <p class="eyebrow">CHẠM VÀO NHỮNG ĐIỀU BÌNH DỊ</p>
+        <h2 class="h-40">Không chỉ là một nơi để nghỉ</h2>
+        <p class="body-15">Thưởng thức, thả lỏng và khám phá theo nhịp riêng của bạn.</p>
+      </div>
+      <div class="grid-3">
+        <article class="service-card">
+          <img src="assets/images/dv-bep-vuon.jpg" alt="Bếp Vườn An">
+          <h3>Bếp Vườn An</h3>
+          <p>Hương vị Hội An, từ những nguyên liệu theo mùa.</p>
+          <p class="service-meta">06:30 – 22:00 · Từ 180.000 ₫</p>
+          <a href="dich-vu.html" class="link">Khám phá trải nghiệm →</a>
+        </article>
+        <article class="service-card">
+          <img src="assets/images/dv-spa.jpg" alt="An Spa">
+          <h3>An Spa</h3>
+          <p>Liệu trình thảo mộc cho cơ thể và tâm trí thư giãn.</p>
+          <p class="service-meta">09:00 – 21:00 · Từ 650.000 ₫</p>
+          <a href="dich-vu.html" class="link">Khám phá trải nghiệm →</a>
+        </article>
+        <article class="service-card">
+          <img src="assets/images/dv-hoi-an.jpg" alt="Hội An theo cách của bạn">
+          <h3>Hội An theo cách của bạn</h3>
+          <p>Đạp xe qua làng rau, dạo phố và ngắm hoàng hôn.</p>
+          <p class="service-meta">Mỗi ngày · Tour từ 350.000 ₫</p>
+          <a href="dich-vu.html" class="link">Khám phá trải nghiệm →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ưu đãi đặt trực tiếp -->
+    <section class="offer">
+      <div class="offer-text">
+        <p class="eyebrow eyebrow-light">KỲ NGHỈ DÀI HƠN, NIỀM VUI NHIỀU HƠN</p>
+        <h2>Ở thêm một đêm,<br>thương thêm Hội An.</h2>
+        <p class="offer-lead">Đặt từ 3 đêm, nhận một buổi trà chiều cho hai người và ưu đãi 10% tại An Spa. Dành riêng cho khách đặt trực tiếp.</p>
+        <p class="offer-note">Áp dụng đến 20/12/2026 · Không cộng dồn ưu đãi khác</p>
+        <div><a href="#dat-phong" class="btn btn-light">Lên kế hoạch kỳ nghỉ →</a></div>
+      </div>
+      <img class="offer-img" src="assets/images/uu-dai.jpg" alt="Ưu đãi An Nhiên">
+    </section>
+
+    <!-- Niềm tin và lời mời -->
+    <section class="section stack-64">
+      <div class="location">
+        <img class="location-img" src="assets/images/vi-tri.jpg" alt="Phố cổ Hội An">
+        <div class="location-text">
+          <p class="eyebrow">GẦN PHỐ CỔ, XA NHỮNG VỘI VÃ</p>
+          <h2 class="h-34">Hội An, ngay ngoài ô cửa.</h2>
+          <p class="body-14">Một đoạn dạo bộ đến Chùa Cầu, một vòng xe đạp ra biển An Bàng. Từ An Nhiên, mỗi ngày đều có một câu chuyện mới.</p>
+          <ul class="distances">
+            <li>Phố cổ · 500 m</li>
+            <li>Biển An Bàng · 4 km</li>
+            <li>Sân bay · 28 km</li>
+          </ul>
+          <a href="lien-he.html" class="link">Chỉ đường đến An Nhiên ↗</a>
+        </div>
+      </div>
+
+      <figure class="testimonial">
+        <p class="eyebrow">NHỮNG KỶ NIỆM Ở LẠI</p>
+        <p class="stars">★★★★★</p>
+        <blockquote>“Một nơi thật sự để nghỉ ngơi. Phòng đầy ánh sáng, bữa sáng ngon và mọi người luôn nhớ tên chúng tôi.”</blockquote>
+        <figcaption>Minh Anh · Hà Nội · Lưu trú tháng 10/2026</figcaption>
+        <p class="testimonial-note">4,9/5 từ 286 đánh giá khách lưu trú</p>
+      </figure>
+
+      <div class="faq">
+        <div class="faq-intro">
+          <p class="eyebrow">CHUẨN BỊ CHO KỲ NGHỈ</p>
+          <h2 class="h-35">Bạn muốn biết thêm?</h2>
+          <p class="body-14">Đội ngũ An Nhiên luôn sẵn lòng hỗ trợ để hành trình của bạn nhẹ nhàng hơn.</p>
+          <a href="lien-he.html" class="link">Liên hệ với chúng tôi →</a>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Giờ nhận và trả phòng như thế nào?</summary>
+            <p>Nhận phòng từ 14:00, trả phòng trước 12:00. Nhận sớm hoặc trả muộn tùy tình trạng phòng và có thể phát sinh phụ phí.</p>
+          </details>
+          <details>
+            <summary>Tôi có thể thay đổi hoặc hủy đặt phòng không?</summary>
+            <p>Bạn có thể thay đổi hoặc hủy miễn phí theo chính sách của hạng phòng đã chọn. Vui lòng liên hệ lễ tân để được hỗ trợ.</p>
+          </details>
+          <details>
+            <summary>Khách sạn có đưa đón sân bay không?</summary>
+            <p>Có. An Nhiên hỗ trợ đưa đón sân bay Đà Nẵng theo yêu cầu, vui lòng báo trước ít nhất 24 giờ.</p>
+          </details>
+          <details>
+            <summary>Trẻ em lưu trú được tính phí như thế nào?</summary>
+            <p>Trẻ em dưới 6 tuổi ở chung giường với bố mẹ được miễn phí. Trẻ từ 6 tuổi trở lên có thể phát sinh phụ phí bữa sáng.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="cta">
+        <div>
+          <h2 class="h-33">Một kỳ nghỉ an nhiên đang đợi bạn.</h2>
+          <p class="body-14">Chọn ngày bạn muốn đến. Phần còn lại, để chúng tôi chăm chút.</p>
+        </div>
+        <a href="tim-phong.html" class="btn btn-primary">Tìm phòng cho kỳ nghỉ →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chân trang -->
+  <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <p class="footer-logo">an nhiên</p>
+        <p>Một khoảng lặng để bạn tìm lại nhịp điệu của riêng mình, giữa vẻ đẹp mộc mạc của Hội An.</p>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Ghé thăm An Nhiên</h4>
+        <p>18 Nguyễn Du, phường Hội An, Đà Nẵng</p>
+        <a href="tel:+842353868888">+84 (0)235 386 8888</a>
+        <a href="mailto:stay@annhienhoian.vn">stay@annhienhoian.vn</a>
+      </div>
+      <div class="footer-col">
+        <h4>Khám phá</h4>
+        <a href="tim-phong.html">Phòng nghỉ &amp; ưu đãi</a>
+        <a href="dich-vu.html">Ẩm thực &amp; chăm sóc sức khỏe</a>
+        <a href="index.html">Câu chuyện An Nhiên</a>
+      </div>
+      <div class="footer-col">
+        <h4>Thông tin hữu ích</h4>
+        <a href="#">Chính sách đặt &amp; hủy phòng</a>
+        <a href="#">Bảo mật thông tin</a>
+        <p><a href="#">Facebook</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 An Nhiên Hội An. Bảo lưu mọi quyền.</p>
+      <p>Thanh toán an toàn&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;Visa / Mastercard / Chuyển khoản</p>
+    </div>
+  </footer>
+
+</body>
+</html>

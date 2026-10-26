@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phòng & giá · Quản trị An Nhiên</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin">
+    <!-- Thanh quản trị -->
+    <aside class="admin-sidebar">
+      <a href="admin-tong-quan.html" class="admin-brand">
+        <span>an nhiên</span>
+        <span>KHÔNG GIAN QUẢN TRỊ</span>
+      </a>
+      <nav class="admin-nav">
+        <a href="admin-tong-quan.html"><img src="assets/icons/admin-dashboard.svg" width="18" height="18" alt="">Tổng quan</a>
+        <a href="admin-dat-phong.html"><img src="assets/icons/admin-calendar.svg" width="18" height="18" alt="">Đặt phòng</a>
+        <a href="admin-phong-gia.html" class="active"><img src="assets/icons/admin-bed.svg" width="18" height="18" alt="">Phòng &amp; giá</a>
+        <a href="admin-noi-dung.html"><img src="assets/icons/admin-images.svg" width="18" height="18" alt="">Nội dung</a>
+      </nav>
+      <div class="admin-links">
+        <p class="tiny">KHÁCH SẠN AN NHIÊN</p>
+        <a href="index.html">↗ &nbsp;Xem website</a>
+        <a href="#">⚙ &nbsp;Cài đặt tài khoản</a>
+        <a href="dang-nhap.html">Đăng xuất</a>
+      </div>
+      <div class="admin-help">
+        <p class="small strong">Cần hỗ trợ vận hành?</p>
+        <p class="tiny">Hướng dẫn đặt phòng, cập nhật giá và quản lý nội dung.</p>
+        <a href="#" class="small">Xem hướng dẫn →</a>
+      </div>
+    </aside>
+
+    <!-- Không gian làm việc -->
+    <div class="workspace">
+      <header class="admin-topbar">
+        <p class="small muted">An Nhiên Hội An &nbsp;&nbsp; / &nbsp;&nbsp; Phòng &amp; giá</p>
+        <div class="admin-account">
+          <button type="button" class="icon-btn" aria-label="Thông báo"><img src="assets/icons/bell.svg" width="19" height="19" alt=""></button>
+          <span class="small muted">05/11/2026</span>
+          <span class="avatar">ML</span>
+          <div class="admin-user">
+            <p class="small strong">Mai Linh</p>
+            <p class="admin-role">Quản trị viên</p>
+          </div>
+        </div>
+      </header>
+      <main class="admin-content">
+        <div class="admin-title">
+          <div>
+            <h1>Phòng &amp; giá</h1>
+            <p class="meta-13">Quản lý 32 phòng, 3 hạng phòng và lịch bán phòng theo ngày.</p>
+          </div>
+          <span class="badge badge-green">Đang hoạt động</span>
+        </div>
+
+        <div class="admin-toolbar">
+          <div class="chips gap-8" data-chips>
+            <button type="button" class="btn btn-sm chip is-active">Hạng phòng &amp; lịch bán</button>
+            <button type="button" class="btn btn-sm chip">Sơ đồ phòng</button>
+            <button type="button" class="btn btn-sm chip">Lịch sử cập nhật</button>
+          </div>
+          <div class="toolbar-group">
+            <button type="button" class="btn btn-outline btn-sm">+ Thêm phòng</button>
+            <button type="button" class="btn btn-primary btn-sm">+ Thêm hạng phòng</button>
+          </div>
+        </div>
+
+        <div class="room-types">
+          <article class="panel room-type is-selected">
+            <img src="assets/images/hang-deluxe-vuon.jpg" alt="Deluxe hướng vườn">
+            <div class="room-type-info">
+              <p class="strong-14">Deluxe hướng vườn</p>
+              <p class="tiny muted">36 m² · 2 khách · 1 King</p>
+              <p class="strong-14">1.800.000 ₫ / đêm</p>
+              <div class="room-type-foot"><span class="muted">16 phòng · Đang mở bán</span><a href="#sua-hang" class="strong">Chỉnh sửa ↗</a></div>
+            </div>
+          </article>
+          <article class="panel room-type">
+            <img src="assets/images/hang-deluxe-twin.jpg" alt="Deluxe hai giường">
+            <div class="room-type-info">
+              <p class="strong-14">Deluxe hai giường</p>
+              <p class="tiny muted">36 m² · 2 khách · 2 giường đơn</p>
+              <p class="strong-14">1.800.000 ₫ / đêm</p>
+              <div class="room-type-foot"><span class="muted">10 phòng · Đang mở bán</span><a href="#sua-hang" class="strong">Chỉnh sửa ↗</a></div>
+            </div>
+          </article>
+          <article class="panel room-type">
+            <img src="assets/images/hang-suite.jpg" alt="Suite ban công">
+            <div class="room-type-info">
+              <p class="strong-14">Suite ban công</p>
+              <p class="tiny muted">58 m² · 2 người lớn, 1 trẻ em</p>
+              <p class="strong-14">2.900.000 ₫ / đêm</p>
+              <div class="room-type-foot"><span class="muted">6 phòng · Đang mở bán</span><a href="#sua-hang" class="strong">Chỉnh sửa ↗</a></div>
+            </div>
+          </article>
+        </div>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Lịch phòng trống &amp; giá bán</h2>
+            <div class="week-nav">
+              <span>12 – 18/11/2026</span>
+              <button type="button" aria-label="Tuần trước">‹</button>
+              <button type="button" aria-label="Tuần sau">›</button>
+            </div>
+          </div>
+          <div class="admin-toolbar">
+            <p class="small muted">Số phòng có thể bán / ngày · Giá cơ bản chưa thuế</p>
+            <div class="toolbar-group">
+              <button type="button" class="btn btn-outline btn-sm">Khóa / Mở bán</button>
+              <button type="button" class="btn btn-outline btn-sm">Cập nhật giá hàng loạt</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th style="width:225px">Hạng phòng</th>
+                  <th style="width:160px">Giá / đêm</th>
+                  <th style="width:96px">12/11</th><th style="width:96px">13/11</th><th style="width:96px">14/11</th>
+                  <th style="width:96px">15/11</th><th style="width:96px">16/11</th><th style="width:96px">17/11</th><th>18/11</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="is-selected">
+                  <td class="cell-strong">Deluxe hướng vườn (16)</td><td>1.800.000 ₫</td>
+                  <td>3</td><td>3</td><td>4</td><td>7</td><td>8</td><td>8</td><td>9</td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">Deluxe hai giường (10)</td><td>1.800.000 ₫</td>
+                  <td>4</td><td>4</td><td>5</td><td>6</td><td>6</td><td>7</td><td>7</td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">Suite ban công (6)</td><td>2.900.000 ₫</td>
+                  <td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>4</td><td>Khóa bán</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tiny muted">Số phòng trống đã trừ đặt phòng xác nhận và phòng bảo trì. Giữ chỗ chưa thanh toán sẽ tự hết hạn sau 30 phút.</p>
+        </section>
+
+        <div class="admin-row">
+          <form class="panel edit-type" id="sua-hang" onsubmit="return false">
+            <div class="panel-head">
+              <h2>Chỉnh sửa · Deluxe hướng vườn</h2>
+              <a href="chi-tiet-phong.html" class="panel-link">Xem trên website ↗</a>
+            </div>
+            <div class="form-row gap-16">
+              <label class="field"><span class="field-label">Tên hạng phòng *</span><input class="input" type="text" value="Deluxe hướng vườn" required></label>
+              <label class="field"><span class="field-label">Mã hạng / số phòng</span><input class="input" type="text" value="DLX-G · 16 phòng"></label>
+            </div>
+            <div class="form-row gap-16">
+              <label class="field"><span class="field-label">Số khách tối đa</span><input class="input" type="text" value="2 người lớn"></label>
+              <label class="field"><span class="field-label">Diện tích / giường</span><input class="input" type="text" value="36 m² · 1 King"></label>
+            </div>
+            <div class="form-row gap-16">
+              <label class="field"><span class="field-label">Giá cơ bản / đêm (VND) *</span><input class="input" type="text" value="1.800.000" inputmode="numeric" required></label>
+              <label class="field">
+                <span class="field-label">Thuế GTGT</span>
+                <select class="input select"><option>8%</option><option>10%</option><option>0%</option></select>
+              </label>
+            </div>
+            <label class="field">
+              <span class="field-label">Gói giá áp dụng</span>
+              <select class="input select">
+                <option>Linh hoạt: cọc 30% · Tiết kiệm: giảm 10%</option>
+                <option>Chỉ giá linh hoạt</option>
+                <option>Chỉ giá tiết kiệm</option>
+              </select>
+            </label>
+            <div class="check-row">
+              <label class="check small"><input type="checkbox" checked> Bữa sáng</label>
+              <label class="check small"><input type="checkbox" checked> Ban công</label>
+              <label class="check small"><input type="checkbox" checked> Bồn tắm</label>
+              <label class="check small"><input type="checkbox" checked> Wi-Fi</label>
+            </div>
+            <p class="tiny muted">Giá hiển thị chưa thuế. Phí dịch vụ đã bao gồm. Cập nhật giá không thay đổi các đặt phòng đã xác nhận.</p>
+            <div class="panel-head">
+              <button type="button" class="small danger">Ngừng mở bán hạng phòng</button>
+              <button type="submit" class="btn btn-primary btn-sm">Lưu thay đổi</button>
+            </div>
+          </form>
+
+          <section class="panel rooms-actual">
+            <div class="panel-head">
+              <h2>Phòng thực tế · Deluxe hướng vườn</h2>
+              <a href="#" class="panel-link">Xem 16 phòng →</a>
+            </div>
+            <div class="badges-left">
+              <span class="badge badge-green">Sẵn sàng</span>
+              <span class="badge badge-amber">Đang dọn</span>
+              <span class="badge badge-red">Bảo trì</span>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table" data-selectable>
+                <thead>
+                  <tr><th style="width:75px">Phòng</th><th style="width:55px">Tầng</th><th style="width:140px">Buồng phòng</th><th>Lịch gần nhất</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="cell-strong">D201</td><td>2</td><td class="ok">Sẵn sàng</td><td>05 – 07/11 · Võ Thanh</td></tr>
+                  <tr><td class="cell-strong">D202</td><td>2</td><td class="warn">Đang dọn</td><td>Trống từ 05/11</td></tr>
+                  <tr class="is-selected"><td class="cell-strong">D203</td><td>2</td><td class="ok">Sẵn sàng</td><td>12 – 15/11 · N. Minh</td></tr>
+                  <tr><td class="cell-strong">D204</td><td>2</td><td>Bảo trì</td><td>Khóa đến 08/11</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <form class="status-update" onsubmit="return false">
+              <label class="field">
+                <span class="field-label">Phòng đang chọn: <span data-selected-room>D203</span></span>
+                <select class="input select"><option>Sẵn sàng</option><option>Đang dọn</option><option>Bảo trì</option></select>
+              </label>
+              <button type="submit" class="btn btn-primary btn-sm">Cập nhật</button>
+            </form>
+            <p class="tiny muted">D203 đã phân cho AN26110508 từ 12 – 15/11. Chặn phòng để bảo trì cần kiểm tra các đặt phòng bị ảnh hưởng.</p>
+            <button type="button" class="small strong text-left">+ Tạo khoảng bảo trì / khóa phòng</button>
+          </section>
+        </div>
+
+        <p class="admin-foot">An Nhiên · Hệ thống quản lý khách sạn &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Dữ liệu cập nhật lúc 09:41, 05/11/2026</p>
+      </main>
+
+      <script>
+        // Chọn chế độ xem, hạng phòng và phòng thực tế
+        document.querySelectorAll('[data-chips] .chip').forEach((chip, _, all) => {
+          chip.addEventListener('click', () => {
+            all.forEach((c) => c.classList.remove('is-active'));
+            chip.classList.add('is-active');
+          });
+        });
+        document.querySelectorAll('.room-type').forEach((card, _, all) => {
+          card.addEventListener('click', () => {
+            all.forEach((c) => c.classList.remove('is-selected'));
+            card.classList.add('is-selected');
+          });
+        });
+        document.querySelectorAll('[data-selectable] tbody tr').forEach((row, _, all) => {
+          row.addEventListener('click', () => {
+            all.forEach((r) => r.classList.remove('is-selected'));
+            row.classList.add('is-selected');
+            document.querySelector('[data-selected-room]').textContent = row.cells[0].textContent;
+          });
+        });
+      </script>
+
+    </div>
+  </div>
+
+</body>
+</html>

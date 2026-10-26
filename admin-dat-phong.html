@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý đặt phòng · Quản trị An Nhiên</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin">
+    <!-- Thanh quản trị -->
+    <aside class="admin-sidebar">
+      <a href="admin-tong-quan.html" class="admin-brand">
+        <span>an nhiên</span>
+        <span>KHÔNG GIAN QUẢN TRỊ</span>
+      </a>
+      <nav class="admin-nav">
+        <a href="admin-tong-quan.html"><img src="assets/icons/admin-dashboard.svg" width="18" height="18" alt="">Tổng quan</a>
+        <a href="admin-dat-phong.html" class="active"><img src="assets/icons/admin-calendar.svg" width="18" height="18" alt="">Đặt phòng</a>
+        <a href="admin-phong-gia.html"><img src="assets/icons/admin-bed.svg" width="18" height="18" alt="">Phòng &amp; giá</a>
+        <a href="admin-noi-dung.html"><img src="assets/icons/admin-images.svg" width="18" height="18" alt="">Nội dung</a>
+      </nav>
+      <div class="admin-links">
+        <p class="tiny">KHÁCH SẠN AN NHIÊN</p>
+        <a href="index.html">↗ &nbsp;Xem website</a>
+        <a href="#">⚙ &nbsp;Cài đặt tài khoản</a>
+        <a href="dang-nhap.html">Đăng xuất</a>
+      </div>
+      <div class="admin-help">
+        <p class="small strong">Cần hỗ trợ vận hành?</p>
+        <p class="tiny">Hướng dẫn đặt phòng, cập nhật giá và quản lý nội dung.</p>
+        <a href="#" class="small">Xem hướng dẫn →</a>
+      </div>
+    </aside>
+
+    <!-- Không gian làm việc -->
+    <div class="workspace">
+      <header class="admin-topbar">
+        <p class="small muted">An Nhiên Hội An &nbsp;&nbsp; / &nbsp;&nbsp; Quản lý đặt phòng</p>
+        <div class="admin-account">
+          <button type="button" class="icon-btn" aria-label="Thông báo"><img src="assets/icons/bell.svg" width="19" height="19" alt=""></button>
+          <span class="small muted">05/11/2026</span>
+          <span class="avatar">ML</span>
+          <div class="admin-user">
+            <p class="small strong">Mai Linh</p>
+            <p class="admin-role">Quản trị viên</p>
+          </div>
+        </div>
+      </header>
+      <main class="admin-content">
+        <div class="admin-title">
+          <div>
+            <h1>Quản lý đặt phòng</h1>
+            <p class="meta-13">Theo dõi hành trình đặt phòng, nhận trả phòng và thanh toán.</p>
+          </div>
+          <span class="badge badge-green">Đang hoạt động</span>
+        </div>
+
+        <div class="chips" data-chips>
+          <button type="button" class="btn btn-sm chip is-active">Tất cả (128)</button>
+          <button type="button" class="btn btn-sm chip">Chờ xác nhận (3)</button>
+          <button type="button" class="btn btn-sm chip">Sắp đến (18)</button>
+          <button type="button" class="btn btn-sm chip">Đang ở (25)</button>
+          <button type="button" class="btn btn-sm chip">Đã trả / hủy</button>
+          <button type="button" class="btn btn-primary btn-sm">+ Tạo đặt phòng</button>
+        </div>
+
+        <form class="panel filter-bar" onsubmit="return false">
+          <label class="field">
+            <span class="field-label">Tìm kiếm</span>
+            <span class="field-input">
+              <input type="search" placeholder="Mã, tên hoặc số điện thoại">
+              <img src="assets/icons/search.svg" width="18" height="18" alt="">
+            </span>
+          </label>
+          <label class="field">
+            <span class="field-label">Ngày nhận phòng</span>
+            <span class="field-input">
+              <input type="text" value="01/11 – 30/11/2026">
+              <img src="assets/icons/calendar-days.svg" width="18" height="18" alt="">
+            </span>
+          </label>
+          <label class="field">
+            <span class="field-label">Thanh toán</span>
+            <select class="input select">
+              <option>Tất cả trạng thái</option>
+              <option>Đã thanh toán</option>
+              <option>Đã cọc 30%</option>
+              <option>Chưa thanh toán</option>
+              <option>Đã hoàn tiền</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-outline btn-sm">Lọc</button>
+          <button type="button" class="btn btn-outline btn-sm">↓ Xuất Excel</button>
+        </form>
+
+        <div class="admin-row">
+          <section class="panel booking-list">
+            <div class="panel-head">
+              <h2 class="h-sans-14">Đặt phòng tháng 11</h2>
+              <span class="tiny muted">Hiển thị 8 / 128 kết quả</span>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table" data-selectable>
+                <thead>
+                  <tr>
+                    <th style="width:146px">Mã / Khách</th>
+                    <th style="width:126px">Phòng</th>
+                    <th style="width:91px">Lưu trú</th>
+                    <th style="width:105px">Tổng tiền</th>
+                    <th style="width:115px">Đặt phòng</th>
+                    <th>Thanh toán</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="is-selected">
+                    <td class="cell-strong">AN26110508<br>Nguyễn Hoàng Minh</td>
+                    <td>Deluxe vườn<br>2 khách · 1 phòng</td><td>12 – 15/11<br>3 đêm</td><td>5.832.000 ₫</td>
+                    <td class="ok">Đã xác nhận</td><td class="ok">Đã cọc 30%</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">AN26110507<br>Trần Mai Anh</td>
+                    <td>Suite ban công<br>2 khách · 1 phòng</td><td>08 – 10/11<br>2 đêm</td><td>6.264.000 ₫</td>
+                    <td class="warn">Chờ xác nhận</td><td class="warn">Chưa thanh toán</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">AN26110506<br>Lê Quang Huy</td>
+                    <td>Deluxe Twin<br>2 khách · 1 phòng</td><td>05 – 07/11<br>2 đêm</td><td>3.888.000 ₫</td>
+                    <td class="ok">Đang ở</td><td class="ok">Đã thanh toán</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">AN26110505<br>Phạm Thu Hà</td>
+                    <td>Deluxe vườn<br>2 khách · 1 phòng</td><td>10 – 12/11<br>2 đêm</td><td>3.888.000 ₫</td>
+                    <td class="ok">Đã xác nhận</td><td class="ok">Đã cọc 30%</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">AN26110504<br>Vũ Đức Nam</td>
+                    <td>Suite ban công<br>2 khách · 1 phòng</td><td>06 – 08/11<br>2 đêm</td><td>6.264.000 ₫</td>
+                    <td class="danger">Đã hủy</td><td>Đã hoàn tiền</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">AN26110412<br>Đặng Ngọc Lan</td>
+                    <td>Deluxe vườn<br>2 khách · 1 phòng</td><td>04 – 06/11<br>2 đêm</td><td>3.888.000 ₫</td>
+                    <td class="ok">Đang ở</td><td class="ok">Đã thanh toán</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">AN26110411<br>Bùi Anh Tuấn</td>
+                    <td>Deluxe Twin<br>2 khách · 1 phòng</td><td>05 – 08/11<br>3 đêm</td><td>5.832.000 ₫</td>
+                    <td class="ok">Đã xác nhận</td><td class="ok">Đã cọc 30%</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-strong">AN26110410<br>Ngô Thảo Vy</td>
+                    <td>Deluxe vườn<br>2 khách · 1 phòng</td><td>02 – 05/11<br>3 đêm</td><td>5.832.000 ₫</td>
+                    <td>Đã trả phòng</td><td class="ok">Đã thanh toán</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination">
+              <span class="tiny muted">8 kết quả / trang ⌄</span>
+              <nav class="pages" aria-label="Phân trang">
+                <a href="#" aria-label="Trang trước">‹</a>
+                <a href="#" class="current">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>…</span>
+                <a href="#">16</a>
+                <a href="#" aria-label="Trang sau">›</a>
+              </nav>
+            </div>
+            <p class="note-box">Trạng thái đặt phòng và thanh toán được theo dõi độc lập. Chỉ nhận phòng khi đã xác nhận thông tin khách và phòng sẵn sàng.</p>
+            <hr class="divider">
+            <div class="panel-head">
+              <h2 class="h-sans-14">Nhận &amp; trả phòng hôm nay</h2>
+              <span class="tiny muted">05/11/2026</span>
+            </div>
+            <div class="task task-green">
+              <div>
+                <p class="small strong">Bùi Anh Tuấn · T102</p>
+                <p class="tiny muted">AN26110411 · Phòng sẵn sàng · Đã cọc 30%</p>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm">Nhận phòng</button>
+            </div>
+            <div class="task">
+              <div>
+                <p class="small strong">Đỗ Hải Yến · D106</p>
+                <p class="tiny muted">AN26110203 · Trả trước 12:00 · Còn thu 972.000 ₫</p>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm">Thu tiền &amp; trả phòng</button>
+            </div>
+          </section>
+
+          <aside class="panel booking-detail">
+            <div class="panel-head">
+              <p class="code-18">AN26110508</p>
+              <button type="button" class="icon-btn" aria-label="Thao tác khác"><img src="assets/icons/ellipsis.svg" width="18" height="18" alt=""></button>
+            </div>
+            <p class="tiny muted">Website · Tạo 05/11/2026, 09:32</p>
+            <span class="badge badge-green">Đặt phòng: Đã xác nhận</span>
+            <p class="strong-16">Nguyễn Hoàng Minh</p>
+            <p class="small muted">+84 912 345 678<br>minh.nguyen@gmail.com</p>
+            <hr class="divider">
+            <div class="line"><span>Nhận phòng</span><b>12/11 · 14:00</b></div>
+            <div class="line"><span>Trả phòng</span><b>15/11 · 12:00</b></div>
+            <div class="line"><span>Khách / thời gian</span><b>2 người lớn · 3 đêm</b></div>
+            <div class="assign">
+              <p class="small strong">Deluxe hướng vườn · D203</p>
+              <p class="tiny muted">Đã phân phòng · Không trùng lịch</p>
+              <a href="admin-phong-gia.html" class="small medium">Thay đổi phòng ↗</a>
+            </div>
+            <p class="strong-13">Thanh toán</p>
+            <span class="badge badge-green">Đã cọc 30% · Visa •4242</span>
+            <div class="line"><span>Tiền phòng</span><b>5.400.000 ₫</b></div>
+            <div class="line"><span>Thuế 8%</span><b>432.000 ₫</b></div>
+            <div class="line"><span>Tổng cộng</span><b>5.832.000 ₫</b></div>
+            <div class="line"><span>Đã thu</span><b>1.749.600 ₫</b></div>
+            <div class="line"><span>Còn phải thu</span><b>4.082.400 ₫</b></div>
+            <hr class="divider">
+            <button type="button" class="btn btn-primary btn-sm btn-block">Ghi nhận thanh toán</button>
+            <div class="btn-pair">
+              <button type="button" class="btn btn-outline btn-sm">Sửa đặt phòng</button>
+              <button type="button" class="btn btn-outline btn-sm">Gửi xác nhận</button>
+            </div>
+            <p class="tiny muted">Nhận phòng khả dụng từ 12/11 khi D203 sẵn sàng.</p>
+            <button type="button" class="btn-disabled" disabled>Nhận phòng · Chưa đến ngày</button>
+            <button type="button" class="small danger text-left">Hủy đặt phòng &amp; xử lý hoàn tiền</button>
+            <hr class="divider">
+            <p class="small strong">Ghi chú nội bộ</p>
+            <p class="tiny muted">Khách muốn phòng yên tĩnh, tầng cao. Đã xếp D203, chờ xác nhận khi đến.</p>
+            <p class="tiny muted">09:33 · Hệ thống xác nhận cọc thành công<br>09:35 · Mai Linh phân phòng D203</p>
+          </aside>
+        </div>
+
+        <p class="admin-foot">An Nhiên · Hệ thống quản lý khách sạn &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Dữ liệu cập nhật lúc 09:41, 05/11/2026</p>
+      </main>
+
+      <script>
+        // Chọn bộ lọc trạng thái và dòng đặt phòng
+        document.querySelectorAll('[data-chips] .chip').forEach((chip, _, all) => {
+          chip.addEventListener('click', () => {
+            all.forEach((c) => c.classList.remove('is-active'));
+            chip.classList.add('is-active');
+          });
+        });
+        document.querySelectorAll('[data-selectable] tbody tr').forEach((row, _, all) => {
+          row.addEventListener('click', () => {
+            all.forEach((r) => r.classList.remove('is-selected'));
+            row.classList.add('is-selected');
+          });
+        });
+      </script>
+
+    </div>
+  </div>
+
+</body>
+</html>

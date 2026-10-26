@@ -1,0 +1,812 @@
+:root {
+  --green-900: #102f28;
+  --green-800: #193f35;
+  --green-700: #233c34;
+  --green-line: #365348;
+  --mint: #cddbd1;
+  --cream: #f7f5ef;
+  --sand: #ede7da;
+  --gold: #a37c46;
+  --muted: #707871;
+  --border: #dfe3dc;
+  --radius: 6px;
+  --gutter: 80px;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Inter", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--cream);
+  color: var(--green-700);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--green-800); line-height: 1.25; }
+
+/* ---------- Thành phần dùng chung ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity .2s, background .2s;
+}
+.btn:hover { opacity: .88; }
+.btn-primary { background: var(--green-800); color: #fff; }
+.btn-light { background: var(--cream); color: var(--green-800); }
+.btn-outline { border-color: var(--border); color: var(--green-800); }
+.btn-outline:hover { background: #fff; opacity: 1; }
+
+.eyebrow { font-size: 11px; font-weight: 600; color: var(--gold); line-height: normal; }
+.eyebrow-light { color: var(--mint); }
+.link { font-size: 13px; font-weight: 600; color: var(--green-700); }
+.link:hover { text-decoration: underline; }
+
+.h-33 { font-size: 33px; }
+.h-34 { font-size: 34px; }
+.h-35 { font-size: 35px; }
+.h-39 { font-size: 39px; }
+.h-40 { font-size: 40px; }
+.body-14 { font-size: 14px; color: var(--muted); }
+.body-15 { font-size: 15px; color: var(--muted); }
+
+.section { padding: 72px var(--gutter); }
+.stack-72 { display: flex; flex-direction: column; gap: 72px; }
+.stack-64 { display: flex; flex-direction: column; gap: 64px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* ---------- Header ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 0 var(--gutter);
+  background: var(--green-800);
+  color: var(--mint);
+  font-size: 10px;
+}
+.topbar-info { display: flex; gap: 20px; align-items: center; }
+.topbar .lang { font-size: 10px; color: var(--mint); }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  padding: 0 var(--gutter);
+  border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; flex-direction: column; gap: 1px; line-height: normal; }
+.brand-name { font-family: var(--serif); font-size: 29px; color: var(--green-800); }
+.brand-tag { font-size: 8px; color: var(--gold); }
+.nav-links { display: flex; align-items: center; gap: 28px; font-size: 13px; color: var(--muted); }
+.nav-links a:not(.btn):hover { color: var(--green-800); }
+.nav-links .active { color: var(--green-800); font-weight: 600; }
+.nav-links .nav-login { color: var(--green-700); }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  height: 590px;
+  padding: 110px var(--gutter) 44px;
+  overflow: hidden;
+}
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(16, 47, 40, .85), rgba(16, 47, 40, .13) 80%);
+}
+.hero-content { position: relative; display: flex; flex-direction: column; gap: 24px; }
+.hero h1 { font-size: 62px; line-height: 1.18; color: var(--cream); max-width: 850px; }
+.hero-lead { font-size: 16px; color: var(--cream); max-width: 530px; }
+.hero-actions { display: flex; align-items: center; gap: 24px; font-size: 13px; color: var(--cream); }
+.hero-indicator {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 32px;
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--cream);
+}
+.hero-indicator button { font-size: 12px; color: var(--cream); padding: 0 6px; }
+
+/* ---------- Đặt phòng ---------- */
+.booking { display: flex; flex-direction: column; gap: 16px; padding: 28px var(--gutter); }
+.booking-card {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.field { flex: 1; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.field-label { font-size: 12px; font-weight: 600; }
+.field-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.field-input:focus-within { border-color: var(--green-800); }
+.field-input input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 14px;
+  color: var(--green-700);
+  background: transparent;
+}
+.promises { display: flex; justify-content: center; gap: 40px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
+
+/* ---------- Câu chuyện ---------- */
+.story { display: flex; align-items: center; gap: 72px; }
+.story-img { width: 590px; height: 390px; object-fit: cover; flex-shrink: 0; }
+.story-text { flex: 1; display: flex; flex-direction: column; gap: 22px; }
+.stats { display: flex; gap: 32px; }
+.stats div { display: flex; flex-direction: column; width: 140px; }
+.stats strong { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.25; color: var(--green-800); }
+.stats span { font-size: 11px; color: var(--muted); }
+
+/* ---------- Phòng nghỉ ---------- */
+.rooms { display: flex; flex-direction: column; gap: 28px; }
+.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.section-head > div, .section-title { display: flex; flex-direction: column; gap: 12px; }
+.room-card { background: #fff; overflow: hidden; }
+.room-card img { width: 100%; height: 270px; object-fit: cover; transition: transform .4s; }
+.room-card:hover img { transform: scale(1.03); }
+.room-info { display: flex; flex-direction: column; gap: 14px; padding: 24px; position: relative; background: #fff; }
+.room-info h3 { font-size: 25px; }
+.room-meta { font-size: 12px; color: var(--muted); }
+.room-amenities { font-size: 13px; color: var(--muted); }
+.room-foot { display: flex; justify-content: space-between; align-items: center; }
+.price { display: flex; flex-direction: column; gap: 2px; }
+.price span { font-size: 11px; color: var(--muted); }
+.price strong { font-size: 20px; font-weight: 600; }
+
+.amenities {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 30px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.amenities li { display: flex; align-items: center; gap: 12px; }
+
+/* ---------- Dịch vụ ---------- */
+.services { display: flex; flex-direction: column; gap: 30px; padding-top: 0; }
+.service-card { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.service-card img { width: 100%; height: 300px; object-fit: cover; }
+.service-card h3 { font-size: 26px; }
+.service-card p { font-size: 13px; color: var(--muted); }
+.service-card .service-meta { font-size: 11px; color: var(--gold); }
+
+/* ---------- Ưu đãi ---------- */
+.offer { display: flex; background: var(--green-800); }
+.offer-text { flex: 1; display: flex; flex-direction: column; gap: 20px; padding: 64px var(--gutter); }
+.offer h2 { font-size: 38px; color: var(--cream); }
+.offer-lead { font-size: 14px; color: var(--mint); }
+.offer-note { font-size: 11px; color: var(--mint); }
+.offer-img { width: 680px; height: 440px; object-fit: cover; flex-shrink: 0; }
+
+/* ---------- Vị trí ---------- */
+.location { display: flex; align-items: center; gap: 64px; }
+.location-img { width: 610px; height: 310px; object-fit: cover; flex-shrink: 0; }
+.location-text { flex: 1; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.distances { display: flex; gap: 32px; flex-wrap: wrap; font-size: 12px; }
+
+/* ---------- Đánh giá ---------- */
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 36px 180px;
+  background: var(--sand);
+  text-align: center;
+}
+.stars { font-size: 15px; color: var(--gold); }
+.testimonial blockquote { font-family: var(--serif); font-size: 27px; line-height: 1.55; color: var(--green-800); }
+.testimonial figcaption { font-size: 12px; color: var(--muted); }
+.testimonial-note { font-size: 11px; color: var(--muted); }
+
+/* ---------- FAQ ---------- */
+.faq { display: flex; gap: 80px; align-items: flex-start; }
+.faq-intro { width: 420px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.faq-list { flex: 1; display: flex; flex-direction: column; gap: 18px; }
+.faq-list details { border-bottom: 1px solid var(--border); padding-bottom: 18px; }
+.faq-list summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 13px;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; font-size: 14px; }
+.faq-list details[open] summary { font-size: 14px; font-weight: 600; }
+.faq-list details[open] summary::after { content: "−"; font-weight: 400; }
+.faq-list details p { margin-top: 18px; font-size: 13px; color: var(--muted); }
+
+/* ---------- CTA ---------- */
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.cta > div { display: flex; flex-direction: column; gap: 8px; }
+
+/* ---------- Footer ---------- */
+.footer { display: flex; flex-direction: column; gap: 32px; padding: 48px var(--gutter) 24px; background: var(--green-900); color: var(--mint); }
+.footer-cols { display: flex; gap: 90px; }
+.footer-brand { width: 340px; display: flex; flex-direction: column; gap: 14px; font-size: 13px; }
+.footer-logo { font-family: var(--serif); font-size: 32px; color: var(--cream); line-height: normal; }
+.footer-col { display: flex; flex-direction: column; gap: 10px; font-size: 12px; }
+.footer-contact { width: 300px; }
+.footer-col h4 { font-size: 14px; font-weight: 600; color: var(--cream); }
+.footer-col a:hover { color: var(--cream); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid var(--green-line);
+  font-size: 10px;
+}
+
+/* =========================================================
+   Trang con (dùng chung)
+   ========================================================= */
+:root {
+  --ok: #2c6b4c;
+  --ok-bg: #eaf1eb;
+  --warn: #92651e;
+  --warn-bg: #fbf0d9;
+}
+
+.page { display: flex; flex-direction: column; gap: 28px; padding: 40px var(--gutter) 64px; }
+.page-32 { padding-top: 32px; }
+.breadcrumb { font-size: 11px; color: var(--muted); }
+.breadcrumb a:hover { color: var(--green-800); }
+.page-intro { display: flex; flex-direction: column; gap: 12px; }
+.gap-10 { gap: 10px; }
+.h-27 { font-size: 27px; }
+.h-29 { font-size: 29px; }
+.h-44 { font-size: 44px; }
+
+.card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); }
+.divider { border: 0; border-top: 1px solid var(--border); width: 100%; }
+.badge { display: inline-flex; align-self: flex-start; padding: 4px 9px; border-radius: var(--radius); font-size: 11px; font-weight: 600; white-space: nowrap; }
+.badge-green { background: var(--ok-bg); color: var(--ok); }
+.badge-amber { background: var(--warn-bg); color: var(--warn); }
+.btn-sm { height: 38px; padding: 0 16px; font-size: 12px; }
+.btn-block { width: 100%; }
+
+.tiny { font-size: 11px; }
+.small { font-size: 12px; }
+.text-13 { font-size: 13px; }
+.meta-13 { font-size: 13px; color: var(--muted); }
+.muted { color: var(--muted); }
+.ok { color: var(--ok); }
+.center { text-align: center; }
+.strong-13 { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--green-700); line-height: 1.6; }
+.strong-14 { font-size: 14px; font-weight: 600; }
+.muted-btn { font-size: 11px; color: var(--muted); }
+.muted-btn:hover { color: var(--green-800); }
+
+.page .booking-card { width: 100%; }
+
+/* ---------- Tìm phòng ---------- */
+.search-layout { display: flex; gap: 28px; align-items: flex-start; }
+.filters { width: 264px; flex-shrink: 0; padding: 24px; display: flex; flex-direction: column; gap: 22px; }
+.filters-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
+.filters-head h2 { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--green-700); line-height: 1.6; }
+.filters-body { display: flex; flex-direction: column; gap: 22px; }
+.filters fieldset { border: 0; display: flex; flex-direction: column; gap: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
+.filters fieldset:last-child { border-bottom: 0; padding-bottom: 0; }
+.filters legend { float: left; font-size: 12px; font-weight: 600; }
+.filters legend + * { clear: both; }
+.price-bar { height: 6px; border-radius: 100px; background: var(--green-800); }
+.check { display: flex; align-items: center; gap: 10px; font-size: 13px; cursor: pointer; }
+.check input { width: 14px; height: 14px; accent-color: var(--green-800); }
+
+.results { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.results-head { display: flex; justify-content: space-between; align-items: center; }
+.sort { font-size: 12px; color: var(--muted); }
+.sort select { border: 0; background: transparent; font: inherit; color: var(--muted); cursor: pointer; }
+.result-card { display: flex; overflow: hidden; }
+.result-card.is-selected { border-color: var(--green-800); }
+.result-card > img { width: 275px; height: 300px; object-fit: cover; flex-shrink: 0; }
+.result-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 24px; }
+.result-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.stock { font-size: 11px; color: var(--warn); }
+.result-info h3 { font-size: 26px; }
+.ticks { display: flex; gap: 20px; flex-wrap: wrap; font-size: 12px; }
+.result-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.price-lg { font-size: 21px; font-weight: 600; }
+
+/* ---------- Chi tiết phòng ---------- */
+.room-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.room-actions { display: flex; gap: 20px; font-size: 13px; white-space: nowrap; }
+.room-actions button:hover { color: var(--gold); }
+.gallery { display: flex; gap: 16px; }
+.gallery-main { width: 840px; height: 420px; object-fit: cover; flex-shrink: 0; }
+.gallery-side { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.gallery-side img { width: 100%; height: 202px; object-fit: cover; }
+.gallery-more { position: relative; }
+.gallery-count { position: absolute; right: 16px; bottom: 16px; padding: 10px; background: #fff; border-radius: var(--radius); font-size: 12px; font-weight: 600; }
+
+.detail-layout { display: flex; gap: 40px; align-items: flex-start; }
+.detail-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
+.feature-icons { display: flex; gap: 32px; flex-wrap: wrap; font-size: 12px; }
+.feature-icons li { display: flex; flex-direction: column; gap: 10px; }
+.rate-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.rate-option { display: flex; flex-direction: column; gap: 14px; padding: 24px; cursor: pointer; }
+.rate-option:has(input:checked) { border-color: var(--green-800); gap: 18px; }
+.rate-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.rate-name { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; }
+.rate-option:has(input:checked) .rate-name { font-size: 17px; }
+.rate-name input { accent-color: var(--green-800); }
+.rate-perks { font-size: 13px; }
+.rate-price { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.rate-price strong { font-size: 20px; font-weight: 600; }
+.rate-option:has(input:checked) .rate-price strong { font-size: 22px; }
+.policies { display: flex; gap: 32px; }
+.policies > div { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+
+.summary { width: 360px; flex-shrink: 0; padding: 26px; display: flex; flex-direction: column; gap: 20px; }
+.line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 13px; }
+.line span { color: var(--muted); }
+.line b { font-weight: 500; }
+.line-total span { font-size: 15px; }
+.line-total b { font-size: 18px; font-weight: 600; }
+
+/* ---------- Tiến trình đặt phòng ---------- */
+.stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 68px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  list-style: none;
+  font-size: 12px;
+  color: var(--muted);
+}
+.stepper li { display: flex; align-items: center; gap: 10px; }
+.stepper li:not(:last-child)::after { content: ""; width: 92px; height: 1px; background: var(--border); }
+.step-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+  background: #f3f5f2;
+  font-size: 11px;
+}
+.stepper .done, .stepper .current { color: var(--green-800); }
+.stepper .current { font-weight: 600; }
+.stepper .done .step-dot, .stepper .current .step-dot { background: var(--green-800); color: #fff; font-weight: 400; }
+
+/* ---------- Biểu mẫu dùng chung ---------- */
+.strong { font-weight: 600; }
+.gap-12 { gap: 12px !important; }
+.form-row { display: flex; gap: 20px; }
+.input {
+  width: 100%;
+  height: 50px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+  color: var(--green-700);
+  outline: 0;
+}
+.input:focus, .field-input:focus-within { border-color: var(--green-800); }
+.select {
+  appearance: none;
+  background: #fff url("assets/icons/chevron-down.svg") no-repeat right 14px center / 18px;
+  cursor: pointer;
+}
+.textarea { height: auto; min-height: 84px; padding: 14px; font-size: 13px; resize: vertical; line-height: 1.6; }
+.h-25 { font-size: 25px; }
+
+/* ---------- Xác nhận đặt phòng ---------- */
+.page-confirm { gap: 30px; padding: 48px 200px 64px; }
+.success { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.success-icon { display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 100px; background: var(--ok-bg); }
+.badges { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.ticket { border-radius: 12px; overflow: hidden; }
+.ticket-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 28px; background: var(--ok-bg); }
+.ticket-code { display: flex; flex-direction: column; gap: 5px; }
+.code { font-size: 27px; font-weight: 600; }
+.ticket-room { display: flex; gap: 28px; padding: 28px; }
+.ticket-room > img { width: 280px; height: 210px; object-fit: cover; flex-shrink: 0; }
+.ticket-room-info { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+.h-28 { font-size: 28px; }
+.stay-dates { display: flex; gap: 60px; }
+.stay-dates > div { display: flex; flex-direction: column; gap: 4px; }
+.date { font-size: 19px; font-weight: 600; }
+.ticket-cols { display: flex; gap: 48px; padding: 0 28px 28px; }
+.ticket-cols > div { flex: 1; display: flex; flex-direction: column; gap: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.col-title { font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--green-700); line-height: 1.6; }
+.text-14 { font-size: 14px; }
+.prepare { display: flex; gap: 32px; }
+.prepare > div { flex: 1; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.actions-center { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.inline-link { font-size: inherit; color: var(--green-700); text-decoration: underline; }
+.text-dark { color: var(--green-700); font-weight: 600; }
+
+/* Thông báo đã gửi email */
+.toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: calc(100% - 32px);
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--ok);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(16, 47, 40, .14);
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+  transition: opacity .3s, transform .3s;
+}
+.toast.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.toast-close { margin-left: 8px; font-size: 20px; line-height: 1; color: var(--muted); }
+.toast-close:hover { color: var(--green-800); }
+@media (max-width: 900px) { .toast { top: 12px; right: 16px; left: 16px; } }
+
+/* ---------- Dịch vụ ---------- */
+.banner { position: relative; height: 400px; padding: 80px var(--gutter); overflow: hidden; }
+.banner-overlay { position: absolute; inset: 0; background: rgba(16, 47, 40, .65); }
+.banner-content { position: relative; display: flex; flex-direction: column; gap: 18px; color: var(--cream); }
+.banner h1 { font-size: 49px; color: var(--cream); max-width: 850px; }
+.banner-content > p:last-child { font-size: 15px; }
+.tabs { display: flex; justify-content: center; align-items: center; gap: 56px; height: 72px; background: #fff; font-size: 13px; color: var(--muted); overflow-x: auto; white-space: nowrap; }
+.tabs a:hover { color: var(--green-700); }
+.tabs .active { color: var(--green-700); font-weight: 600; }
+.services-list { display: flex; flex-direction: column; gap: 56px; padding-top: 64px; padding-bottom: 64px; }
+.feature { display: flex; align-items: center; gap: 64px; }
+.feature > img { width: 600px; height: 370px; object-fit: cover; flex-shrink: 0; }
+.feature-reverse { flex-direction: row-reverse; }
+.feature-text { flex: 1; display: flex; flex-direction: column; gap: 19px; align-items: flex-start; }
+.price-note { font-size: 13px; font-weight: 600; color: var(--gold); }
+.more-services { display: flex; flex-direction: column; gap: 28px; }
+.gap-16 { gap: 16px; }
+.img-230 { height: 230px !important; }
+.h-24 { font-size: 24px; }
+.help-box { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 32px; background: var(--sand); }
+.help-box > div { display: flex; flex-direction: column; gap: 10px; max-width: 640px; }
+
+/* ---------- Liên hệ ---------- */
+.page-contact { gap: 40px; padding-top: 48px; }
+.contact-layout { display: flex; gap: 64px; align-items: flex-start; }
+.contact-info { width: 440px; flex-shrink: 0; display: flex; flex-direction: column; gap: 24px; }
+.channels { display: flex; flex-direction: column; gap: 24px; }
+.channels li { display: flex; gap: 16px; }
+.channels li > div { display: flex; flex-direction: column; gap: 4px; }
+.channel-icon { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; flex-shrink: 0; border-radius: 100px; background: var(--sand); }
+.medium-13 { font-size: 13px; font-weight: 500; }
+.socials { display: flex; gap: 14px; font-size: 13px; }
+.socials a:hover { color: var(--gold); }
+.book-now { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; padding: 20px; background: var(--ok-bg); }
+.contact-form { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 22px; padding: 32px; border-radius: 12px; }
+.input::placeholder { color: var(--muted); }
+.textarea-lg { min-height: 132px; }
+.directions { display: flex; align-items: center; gap: 40px; }
+.map { position: relative; width: 800px; height: 290px; flex-shrink: 0; overflow: hidden; background: #e6ebdf; }
+.map-river { position: absolute; inset: 0; width: 100%; height: 100%; }
+.map-roads { position: absolute; top: 22.41%; left: 16.68%; width: 62.61%; height: 24.14%; }
+.map-label { position: absolute; font-size: 12px; color: var(--muted); line-height: normal; }
+.map-river-label { position: absolute; left: 390px; top: 232px; font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--muted); }
+.map-pin { position: absolute; left: 220px; top: 80px; padding: 12px; border-radius: var(--radius); background: var(--green-800); color: var(--cream); font-size: 13px; font-weight: 600; }
+.map-note { position: absolute; left: 14px; top: 258px; padding: 4px; background: #fff; font-size: 9px; color: var(--muted); }
+.directions-text { flex: 1; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+
+/* ---------- Đăng nhập ---------- */
+.login { display: flex; min-height: 100vh; }
+.login-brand { position: relative; width: 690px; flex-shrink: 0; min-height: 1000px; padding: 64px; overflow: hidden; color: var(--cream); }
+.login-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(16, 47, 40, .2), rgba(16, 47, 40, .9)); }
+.login-logo { position: relative; display: flex; flex-direction: column; gap: 5px; line-height: normal; }
+.login-logo span:first-child { font-family: var(--serif); font-size: 40px; color: var(--cream); }
+.login-logo span:last-child { font-size: 11px; font-weight: 600; color: var(--mint); }
+.login-greeting { position: absolute; left: 64px; top: 650px; width: 550px; display: flex; flex-direction: column; gap: 22px; }
+.login-greeting h2 { font-size: 43px; color: var(--cream); }
+.login-lead { font-size: 15px; }
+.login-greeting .tiny { color: var(--mint); }
+.login-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 32px; padding: 48px 96px 40px; }
+.back-link:hover { color: var(--green-800); }
+.login-form { display: flex; flex-direction: column; gap: 22px; padding-top: 35px; }
+.h-37 { font-size: 37px; }
+.segmented { display: flex; gap: 5px; padding: 5px; background: var(--sand); border-radius: var(--radius); }
+.segmented label { flex: 1; cursor: pointer; }
+.segmented input { position: absolute; opacity: 0; pointer-events: none; }
+.segmented span { display: flex; align-items: center; justify-content: center; gap: 8px; height: 42px; border-radius: var(--radius); font-size: 13px; }
+.segmented input:checked + span { background: #fff; font-weight: 600; }
+.segmented input:focus-visible + span { outline: 2px solid var(--green-800); }
+.icon-btn { display: flex; padding: 0; }
+.login-options { display: flex; justify-content: space-between; align-items: center; }
+.medium { font-weight: 500; }
+.staff-box { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; padding: 18px; background: var(--ok-bg); border-radius: var(--radius); }
+.staff-title { display: flex; align-items: center; gap: 8px; }
+.login-foot { font-size: 10px; color: var(--muted); }
+
+/* =========================================================
+   Quản trị
+   ========================================================= */
+.admin-body { background: #f3f5f2; }
+.admin { display: flex; min-height: 100vh; }
+.admin-sidebar {
+  width: 232px;
+  flex-shrink: 0;
+  min-height: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 32px 20px;
+  background: var(--green-900);
+  color: var(--mint);
+}
+.admin-brand { display: flex; flex-direction: column; gap: 8px; padding-left: 12px; line-height: normal; }
+.admin-brand span:first-child { font-family: var(--serif); font-size: 29px; color: var(--cream); }
+.admin-brand span:last-child { font-size: 11px; font-weight: 600; }
+.admin-nav { display: flex; flex-direction: column; gap: 8px; }
+.admin-nav a { display: flex; align-items: center; gap: 12px; height: 48px; padding: 0 12px; border-radius: var(--radius); font-size: 13px; }
+.admin-nav a:hover { background: rgba(255, 255, 255, .06); }
+.admin-nav a.active { background: #36584b; color: #fff; font-weight: 600; }
+.admin-nav a.active img { filter: brightness(0) invert(1); }
+.admin-links { display: flex; flex-direction: column; gap: 14px; padding: 24px 0 0 12px; font-size: 12px; }
+.admin-links a:hover { color: #fff; }
+.admin-help { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: #23473b; border-radius: var(--radius); }
+.admin-help .strong, .admin-help a { color: var(--cream); }
+
+.workspace { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.admin-topbar { display: flex; justify-content: space-between; align-items: center; height: 76px; padding: 0 32px; background: #fff; border-bottom: 1px solid var(--border); }
+.admin-account { display: flex; align-items: center; gap: 18px; }
+.avatar { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 100px; background: var(--sand); font-size: 11px; font-weight: 600; }
+.admin-role { font-size: 10px; color: var(--muted); }
+
+.admin-content { display: flex; flex-direction: column; gap: 24px; padding: 32px; }
+.admin-title { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.admin-title > div { display: flex; flex-direction: column; gap: 6px; }
+.admin-title h1 { font-family: var(--sans); font-size: 28px; font-weight: 600; color: var(--green-700); line-height: normal; }
+.admin-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.toolbar-group { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-outline.btn-sm { background: transparent; }
+.panel { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; gap: 20px; }
+.panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.panel-head h2 { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--green-700); line-height: 1.6; }
+.panel-link { font-size: 12px; font-weight: 500; color: var(--green-800); white-space: nowrap; }
+.panel-link:hover { text-decoration: underline; }
+
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.kpi { gap: 12px; }
+.kpi-head { display: flex; justify-content: space-between; align-items: flex-start; font-size: 12px; color: var(--muted); }
+.kpi-value { font-size: 30px; font-weight: 600; }
+
+.admin-row { display: flex; gap: 24px; align-items: flex-start; }
+.revenue { width: 716px; flex-shrink: 0; }
+.room-status { flex: 1; min-width: 0; }
+.revenue-total { display: flex; align-items: baseline; gap: 24px; }
+.revenue-total strong { font-size: 26px; font-weight: 600; }
+.bar-chart { display: flex; align-items: flex-end; gap: 18px; }
+.bar-axis { display: flex; flex-direction: column; justify-content: space-between; height: 175px; font-size: 10px; color: var(--muted); }
+.bars { flex: 1; display: flex; align-items: flex-end; gap: 32px; height: 195px; padding: 0 24px; }
+.bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 10px; color: var(--muted); }
+.bar { width: 100%; background: #7e9c8c; border-radius: 4px 4px 0 0; }
+.bar-today { background: var(--green-800); }
+.occupancy { display: flex; align-items: center; gap: 22px; }
+.occupancy-ring { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 120px; height: 120px; flex-shrink: 0; border-radius: 100px; background: var(--ok-bg); }
+.occupancy-ring strong { font-size: 28px; font-weight: 600; }
+.occupancy-ring span { font-size: 10px; color: var(--muted); }
+.legend { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.arrivals { display: flex; justify-content: space-between; }
+.arrivals div { display: flex; flex-direction: column; }
+.arrivals div:last-child { align-items: flex-end; }
+.arrivals strong { font-size: 23px; font-weight: 600; }
+.arrivals span { font-size: 11px; color: var(--muted); }
+
+.alert { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 16px; background: var(--warn-bg); border-radius: var(--radius); font-size: 12px; color: var(--warn); }
+.alert strong { font-weight: 600; }
+.alert a:hover { text-decoration: underline; }
+
+.table-wrap { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 12px; text-align: left; }
+.data-table th { height: 42px; padding: 0 12px; background: #f3f5f2; font-size: 11px; font-weight: 600; color: var(--muted); vertical-align: middle; line-height: normal; white-space: nowrap; }
+.data-table td { min-height: 64px; padding: 14px 12px; border-bottom: 1px solid var(--border); line-height: 1.55; }
+.data-table tbody tr:hover { background: #fafbf9; }
+.cell-strong { font-weight: 500; }
+.warn { color: var(--warn); }
+.admin-foot { font-size: 10px; color: var(--muted); }
+
+/* ---------- Quản lý đặt phòng ---------- */
+:root { --danger: #ae5147; }
+.danger { color: var(--danger); }
+.text-left { text-align: left; }
+.chips { display: flex; gap: 12px; flex-wrap: wrap; }
+.chip { border-color: var(--border); background: transparent; color: var(--green-800); }
+.chip.is-active { background: var(--green-800); color: #fff; }
+.filter-bar { flex-direction: row; align-items: flex-end; gap: 16px; padding: 18px; }
+.filter-bar .field { flex: 1; }
+.booking-list { width: 740px; flex-shrink: 0; padding: 16px; gap: 16px; }
+.booking-detail { flex: 1; min-width: 0; gap: 18px; }
+.h-sans-14 { font-size: 14px !important; }
+.data-table[data-selectable] tbody tr { cursor: pointer; }
+.data-table tbody tr.is-selected { background: var(--ok-bg); }
+.pagination { display: flex; justify-content: space-between; align-items: center; }
+.pages { display: flex; align-items: center; gap: 10px; font-size: 12px; }
+.pages a:hover { color: var(--ok); }
+.pages .current { padding: 4px 9px; border-radius: var(--radius); background: var(--ok-bg); color: var(--ok); font-size: 11px; font-weight: 600; }
+.note-box { padding: 14px; background: #f3f5f2; border-radius: var(--radius); font-size: 11px; color: var(--muted); }
+.task { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px; background: #f3f5f2; border-radius: var(--radius); }
+.task > div { display: flex; flex-direction: column; gap: 4px; }
+.task-green { background: var(--ok-bg); }
+.code-18 { font-size: 18px; font-weight: 600; }
+.strong-16 { font-size: 16px; font-weight: 600; }
+.assign { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; padding: 14px; background: var(--ok-bg); border-radius: var(--radius); }
+.btn-pair { display: flex; gap: 8px; }
+.btn-pair .btn { flex: 1; }
+.btn-disabled { height: 38px; border-radius: var(--radius); background: #f3f5f2; font-size: 12px; color: var(--muted); cursor: not-allowed; }
+
+/* ---------- Phòng & giá ---------- */
+.gap-8 { gap: 8px; }
+.badge-red { background: #faeae6; color: var(--danger); }
+.room-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.room-type { flex-direction: row; gap: 14px; padding: 16px; cursor: pointer; }
+.room-type.is-selected { border-color: var(--green-800); }
+.room-type > img { width: 92px; height: 116px; object-fit: cover; flex-shrink: 0; }
+.room-type-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 7px; }
+.room-type-foot { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; }
+.room-type-foot a:hover { text-decoration: underline; }
+.week-nav { display: flex; align-items: center; gap: 14px; font-size: 12px; font-weight: 500; color: var(--green-800); }
+.week-nav button { padding: 0 4px; font-size: 14px; }
+.edit-type { width: 552px; flex-shrink: 0; }
+.rooms-actual { flex: 1; min-width: 0; }
+.check-row { display: flex; gap: 20px; flex-wrap: wrap; }
+.badges-left { display: flex; gap: 10px; }
+.status-update { display: flex; align-items: flex-end; gap: 12px; }
+.status-update .field { flex: 1; }
+
+/* ---------- Quản lý nội dung ---------- */
+.gap-10 { gap: 10px; }
+.badge-grey { background: #f3f5f2; color: var(--muted); }
+.text-tabs { display: flex; gap: 16px; font-size: 12px; color: var(--muted); }
+.text-tabs button { font-size: 12px; color: var(--muted); }
+.text-tabs .is-active { color: var(--green-700); font-weight: 600; }
+.library { display: flex; gap: 24px; align-items: flex-start; }
+.library-grid-wrap { width: 752px; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; }
+.library-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.media { display: flex; flex-direction: column; gap: 6px; padding: 6px; border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; }
+.media.is-selected { border: 2px solid var(--green-800); padding: 5px; }
+.media img { width: 100%; height: 115px; object-fit: cover; }
+.media-name { display: flex; justify-content: space-between; align-items: center; font-size: 11px; }
+.media-name b { font-weight: 500; }
+.media-name input { width: 12px; height: 12px; accent-color: var(--green-800); }
+.media-meta { font-size: 10px; color: var(--muted); }
+.side-editor { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 15px; padding: 18px; background: #f3f5f2; border-radius: var(--radius); }
+.toggle-row { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+.toggle-input { position: absolute; opacity: 0; pointer-events: none; }
+.toggle-badge { background: #e4e7e2; color: var(--muted); }
+.toggle-badge::after { content: "Tắt"; }
+.toggle-input:checked + .toggle-badge { background: var(--ok-bg); color: var(--ok); }
+.toggle-input:checked + .toggle-badge::after { content: "Bật"; }
+.toggle-input:focus-visible + .toggle-badge { outline: 2px solid var(--green-800); }
+.service-table { width: 670px; flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; }
+.inbox { display: flex; flex-direction: column; gap: 20px; }
+.inbox li { display: flex; flex-direction: column; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.inbox a:hover { text-decoration: underline; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  :root { --gutter: 40px; }
+  .story-img, .location-img { width: 45%; }
+  .offer-img { width: 50%; height: auto; }
+  .testimonial { padding: 36px 60px; }
+  .footer-cols { gap: 48px; flex-wrap: wrap; }
+}
+
+@media (max-width: 900px) {
+  :root { --gutter: 20px; }
+  .topbar { display: none; }
+  .nav-links a:not(.btn) { display: none; }
+  .hero { height: auto; min-height: 520px; padding-top: 80px; }
+  .hero h1 { font-size: 40px; }
+  .booking-card { flex-direction: column; align-items: stretch; }
+  .story, .location, .faq, .offer, .cta { flex-direction: column; align-items: stretch; }
+  .story-img, .location-img, .offer-img { width: 100%; height: 280px; }
+  .faq { gap: 40px; }
+  .faq-intro { width: 100%; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .section-head { flex-direction: column; align-items: flex-start; }
+  .h-39, .h-40 { font-size: 32px; }
+  .testimonial { padding: 32px 20px; }
+  .testimonial blockquote { font-size: 22px; }
+  .footer-brand, .footer-contact { width: 100%; }
+  .footer-bottom { flex-direction: column; }
+}
+
+/* ---------- Responsive: trang con & quản trị ---------- */
+@media (max-width: 1200px) {
+  .page-confirm { padding-left: 80px; padding-right: 80px; }
+  .gallery-main, .feature > img { width: 58%; }
+  .map { width: 60%; }
+  .contact-info { width: 360px; }
+  .login-brand { width: 45%; }
+  .login-main { padding: 48px 56px 40px; }
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .admin-row, .library { flex-direction: column; align-items: stretch; }
+  .revenue, .booking-list, .edit-type, .library-grid-wrap, .service-table { width: 100%; }
+}
+
+@media (max-width: 900px) {
+  .page-confirm { padding: 40px var(--gutter) 56px; }
+  .search-layout, .detail-layout, .contact-layout, .directions,
+  .feature, .feature-reverse, .gallery, .room-head, .rate-head, .policies, .prepare,
+  .ticket-room, .ticket-cols, .help-box, .form-row, .result-card { flex-direction: column; align-items: stretch; }
+  .filters, .summary, .contact-info { width: 100%; }
+  .result-card > img, .ticket-room > img, .gallery-main, .feature > img { width: 100%; height: 240px; }
+  .map { width: 100%; height: 290px; }
+  .h-44 { font-size: 34px; }
+  .banner { height: auto; padding: 56px var(--gutter); }
+  .banner h1 { font-size: 34px; }
+  .tabs { justify-content: flex-start; gap: 28px; padding: 0 var(--gutter); }
+  .stepper { gap: 12px; padding: 0 12px; }
+  .stepper li:not(:last-child)::after { width: 24px; }
+  .stepper li { font-size: 11px; }
+  .login { flex-direction: column; }
+  .login-brand { width: 100%; min-height: 360px; }
+  .login-greeting { position: relative; left: 0; top: 0; width: auto; margin-top: 120px; }
+  .login-main { padding: 32px var(--gutter); }
+  .admin { flex-direction: column; }
+  .admin-sidebar { width: 100%; min-height: 0; gap: 16px; padding: 20px 16px; }
+  .admin-nav { flex-direction: row; overflow-x: auto; }
+  .admin-nav a { flex-shrink: 0; }
+  .admin-links, .admin-help { display: none; }
+  .admin-topbar { padding: 0 16px; }
+  .admin-user, .admin-account > .small { display: none; }
+  .admin-content { padding: 20px 16px; }
+  .kpis, .room-types, .library-grid { grid-template-columns: 1fr; }
+  .filter-bar, .status-update { flex-direction: column; align-items: stretch; }
+  .bars { gap: 12px; padding: 0 8px; }
+  .alert { gap: 10px; }
+}

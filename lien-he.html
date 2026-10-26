@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ · An Nhiên Hội An</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Điều hướng khách hàng -->
+  <header class="site-header">
+    <div class="topbar">
+      <p>Một chốn an yên, giữa lòng Hội An</p>
+      <p class="topbar-info">
+        <a href="tel:+842353868888">+84 (0)235 386 8888</a>
+        <span>•</span>
+        <a href="mailto:stay@annhienhoian.vn">stay@annhienhoian.vn</a>
+        <span>|</span>
+        <button type="button" class="lang">Tiếng Việt⌄</button>
+      </p>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <span class="brand-name">an nhiên</span>
+        <span class="brand-tag">HỘI AN · BOUTIQUE HOTEL</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="tim-phong.html">Phòng nghỉ</a>
+        <a href="dich-vu.html">Dịch vụ</a>
+        <a href="lien-he.html" class="active">Liên hệ</a>
+        <a href="dang-nhap.html" class="nav-login">Đăng nhập</a>
+        <a href="tim-phong.html" class="btn btn-primary">Đặt phòng</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page page-contact">
+    <div class="page-intro">
+      <p class="eyebrow">CHÚNG TÔI LUÔN Ở ĐÂY</p>
+      <h1 class="h-40">Một lời nhắn, bắt đầu một hành trình</h1>
+      <p class="body-15">Cần tư vấn phòng nghỉ, đặt dịch vụ hay chuẩn bị một dịp đặc biệt? Hãy kể với An Nhiên.</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h2 class="h-29">Rất vui được đón bạn</h2>
+        <p class="body-14">Một cuộc gọi hay một dòng tin nhắn — đội ngũ An Nhiên luôn sẵn lòng lắng nghe.</p>
+        <ul class="channels">
+          <li>
+            <span class="channel-icon"><img src="assets/icons/map-pin.svg" width="19" height="19" alt=""></span>
+            <div><p class="small muted">Ghé thăm chúng tôi</p><p class="medium-13">18 Nguyễn Du, phường Hội An, Đà Nẵng</p></div>
+          </li>
+          <li>
+            <span class="channel-icon"><img src="assets/icons/phone.svg" width="19" height="19" alt=""></span>
+            <div><p class="small muted">Đặt phòng &amp; hỗ trợ 24/7</p><a href="tel:+842353868888" class="medium-13">+84 (0)235 386 8888</a></div>
+          </li>
+          <li>
+            <span class="channel-icon"><img src="assets/icons/mail.svg" width="19" height="19" alt=""></span>
+            <div><p class="small muted">Gửi email cho An Nhiên</p><a href="mailto:stay@annhienhoian.vn" class="medium-13">stay@annhienhoian.vn</a></div>
+          </li>
+          <li>
+            <span class="channel-icon"><img src="assets/icons/clock.svg" width="19" height="19" alt=""></span>
+            <div><p class="small muted">Thời gian lưu trú</p><p class="medium-13">Nhận phòng từ 14:00 · Trả trước 12:00</p></div>
+          </li>
+        </ul>
+        <hr class="divider">
+        <p class="socials">Theo dõi An Nhiên <a href="#">Facebook ↗</a> <a href="#">Instagram ↗</a></p>
+        <div class="book-now">
+          <p class="strong-14">Bạn muốn đặt phòng ngay?</p>
+          <p class="small muted">Xem tình trạng phòng và giá tốt nhất theo ngày lưu trú của bạn.</p>
+          <a href="tim-phong.html" class="link">Tìm phòng trống →</a>
+        </div>
+      </div>
+
+      <form class="card contact-form" onsubmit="return false">
+        <h2 class="h-29">Gửi lời nhắn cho An Nhiên</h2>
+        <p class="small muted">Chúng tôi sẽ phản hồi trong vòng 24 giờ. * Thông tin bắt buộc.</p>
+        <div class="form-row">
+          <label class="field"><span class="field-label">Họ và tên *</span><input class="input" type="text" placeholder="Nhập họ và tên" required></label>
+          <label class="field"><span class="field-label">Số điện thoại</span><input class="input" type="tel" placeholder="Nhập số điện thoại"></label>
+        </div>
+        <label class="field"><span class="field-label">Email *</span><input class="input" type="email" placeholder="Nhập địa chỉ email" required></label>
+        <div class="form-row">
+          <label class="field">
+            <span class="field-label">Bạn cần hỗ trợ về *</span>
+            <select class="input select">
+              <option>Tư vấn đặt phòng</option>
+              <option>Đặt dịch vụ</option>
+              <option>Thay đổi / hủy đặt phòng</option>
+              <option>Dịp đặc biệt</option>
+              <option>Khác</option>
+            </select>
+          </label>
+          <label class="field"><span class="field-label">Mã đặt phòng (nếu có)</span><input class="input" type="text" placeholder="Ví dụ: AN26110508"></label>
+        </div>
+        <label class="field">
+          <span class="field-label">Lời nhắn của bạn *</span>
+          <textarea class="input textarea textarea-lg" placeholder="Bạn dự định đến khi nào? Chúng tôi có thể giúp gì?" required></textarea>
+        </label>
+        <label class="check small muted"><input type="checkbox" checked required> Tôi đồng ý để An Nhiên liên hệ về yêu cầu này theo Chính sách bảo mật.</label>
+        <div><button type="submit" class="btn btn-primary">Gửi lời nhắn →</button></div>
+      </form>
+    </div>
+
+    <div class="directions">
+      <div class="map" role="img" aria-label="Sơ đồ vị trí An Nhiên gần Chùa Cầu và sông Hoài">
+        <img class="map-river" src="assets/icons/map-song-hoai.svg" alt="">
+        <img class="map-roads" src="assets/icons/map-duong.svg" alt="">
+        <span class="map-label" style="left:210px;top:145px">Nguyễn Du</span>
+        <span class="map-label" style="left:580px;top:89px">Chùa Cầu</span>
+        <span class="map-river-label">Sông Hoài</span>
+        <span class="map-pin">● An Nhiên Hội An</span>
+        <span class="map-note">Sơ đồ vị trí minh họa · Không theo tỷ lệ</span>
+      </div>
+      <div class="directions-text">
+        <p class="eyebrow">TÌM ĐƯỜNG ĐẾN AN NHIÊN</p>
+        <h2 class="h-29">Ở gần mọi điều bạn yêu.</h2>
+        <p class="meta-13">Từ sân bay Đà Nẵng: khoảng 45 phút.<br>Từ Chùa Cầu: 5 phút đi bộ.<br>Bãi đỗ xe miễn phí, có hỗ trợ hành lý.</p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=18+Nguy%E1%BB%85n+Du+H%E1%BB%99i+An" target="_blank" rel="noopener" class="btn btn-outline">Chỉ đường trên Google Maps ↗</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Chân trang -->
+  <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <p class="footer-logo">an nhiên</p>
+        <p>Một khoảng lặng để bạn tìm lại nhịp điệu của riêng mình, giữa vẻ đẹp mộc mạc của Hội An.</p>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Ghé thăm An Nhiên</h4>
+        <p>18 Nguyễn Du, phường Hội An, Đà Nẵng</p>
+        <a href="tel:+842353868888">+84 (0)235 386 8888</a>
+        <a href="mailto:stay@annhienhoian.vn">stay@annhienhoian.vn</a>
+      </div>
+      <div class="footer-col">
+        <h4>Khám phá</h4>
+        <a href="tim-phong.html">Phòng nghỉ &amp; ưu đãi</a>
+        <a href="dich-vu.html">Ẩm thực &amp; chăm sóc sức khỏe</a>
+        <a href="index.html">Câu chuyện An Nhiên</a>
+      </div>
+      <div class="footer-col">
+        <h4>Thông tin hữu ích</h4>
+        <a href="#">Chính sách đặt &amp; hủy phòng</a>
+        <a href="#">Bảo mật thông tin</a>
+        <p><a href="#">Facebook</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 An Nhiên Hội An. Bảo lưu mọi quyền.</p>
+      <p>Thanh toán an toàn&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;Visa / Mastercard / Chuyển khoản</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xác nhận đặt phòng · An Nhiên Hội An</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Điều hướng khách hàng -->
+  <header class="site-header">
+    <div class="topbar">
+      <p>Một chốn an yên, giữa lòng Hội An</p>
+      <p class="topbar-info">
+        <a href="tel:+842353868888">+84 (0)235 386 8888</a>
+        <span>•</span>
+        <a href="mailto:stay@annhienhoian.vn">stay@annhienhoian.vn</a>
+        <span>|</span>
+        <button type="button" class="lang">Tiếng Việt⌄</button>
+      </p>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <span class="brand-name">an nhiên</span>
+        <span class="brand-tag">HỘI AN · BOUTIQUE HOTEL</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="tim-phong.html">Phòng nghỉ</a>
+        <a href="dich-vu.html">Dịch vụ</a>
+        <a href="lien-he.html">Liên hệ</a>
+        <a href="dang-nhap.html" class="nav-login">Đăng nhập</a>
+        <a href="tim-phong.html" class="btn btn-primary">Đặt phòng</a>
+      </div>
+    </nav>
+  </header>
+
+  <ol class="stepper">
+    <li class="done"><span class="step-dot">✓</span>Chọn phòng</li>
+    <li class="current"><span class="step-dot">2</span>Xác nhận</li>
+  </ol>
+
+  <div class="toast" id="email-toast" role="status" aria-live="polite">
+    <img src="assets/icons/mail.svg" width="19" height="19" alt="">
+    <div>
+      <p class="strong-14">Đã gửi email xác nhận cho bạn</p>
+      <p class="small muted">Kiểm tra hộp thư minh.nguyen@gmail.com</p>
+    </div>
+    <button type="button" class="toast-close" aria-label="Đóng thông báo">×</button>
+  </div>
+
+  <main class="page page-confirm">
+    <div class="success">
+      <span class="success-icon"><img src="assets/icons/check.svg" width="28" height="28" alt=""></span>
+      <h1 class="h-39">Hẹn gặp bạn tại An Nhiên!</h1>
+      <p class="body-15">Đặt phòng thành công. Chúng tôi đã gửi email xác nhận kèm chi tiết kỳ nghỉ đến <strong class="text-dark">minh.nguyen@gmail.com</strong>.</p>
+      <div class="badges">
+        <span class="badge badge-green">Đặt phòng: Đã xác nhận</span>
+        <span class="badge badge-green">✉ Email: Đã gửi</span>
+      </div>
+    </div>
+
+    <article class="card ticket">
+      <div class="ticket-head">
+        <div class="ticket-code">
+          <p class="tiny muted">MÃ ĐẶT PHÒNG · 05/11/2026</p>
+          <p class="code">AN26110508</p>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm">↓ Tải xác nhận PDF</button>
+      </div>
+      <div class="ticket-room">
+        <img src="assets/images/xac-nhan-phong.jpg" alt="Deluxe hướng vườn">
+        <div class="ticket-room-info">
+          <h2 class="h-28">Deluxe hướng vườn</h2>
+          <p class="meta-13">1 phòng · 1 giường King · 2 người lớn · Gồm bữa sáng</p>
+          <div class="stay-dates">
+            <div>
+              <p class="tiny muted">NHẬN PHÒNG</p>
+              <p class="date">12/11/2026</p>
+              <p class="small">Từ 14:00</p>
+            </div>
+            <div>
+              <p class="tiny muted">TRẢ PHÒNG</p>
+              <p class="date">15/11/2026</p>
+              <p class="small">Trước 12:00 · 3 đêm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ticket-cols">
+        <div>
+          <h3 class="col-title">Thông tin khách</h3>
+          <p class="text-14">Nguyễn Hoàng Minh</p>
+          <p class="small muted">minh.nguyen@gmail.com<br>+84 912 345 678</p>
+          <p class="small muted">Yêu cầu: phòng yên tĩnh, tầng cao nếu có thể. Khách sạn sẽ xác nhận khi nhận phòng.</p>
+        </div>
+        <div>
+          <h3 class="col-title">Thanh toán</h3>
+          <div class="line"><span>Tiền phòng 3 đêm</span><b>5.400.000 ₫</b></div>
+          <div class="line"><span>Thuế GTGT 8%</span><b>432.000 ₫</b></div>
+          <div class="line line-total"><span>Tổng cộng</span><b>5.832.000 ₫</b></div>
+          <div class="line"><span>Thanh toán tại khách sạn</span><b>Khi nhận phòng</b></div>
+        </div>
+      </div>
+    </article>
+
+    <div class="prepare">
+      <div>
+        <h2 class="h-25">Tìm đường đến An Nhiên</h2>
+        <p class="meta-13">18 Nguyễn Du, phường Hội An, Đà Nẵng<br>Cách sân bay Đà Nẵng khoảng 45 phút.<br>Vui lòng mang CCCD hoặc hộ chiếu khi nhận phòng.</p>
+        <a href="lien-he.html" class="link">Mở chỉ đường ↗</a>
+      </div>
+      <div>
+        <h2 class="h-25">Kế hoạch thay đổi?</h2>
+        <p class="meta-13">Hủy miễn phí trước 14:00 ngày 09/11/2026. Sau thời hạn này hoặc không đến, phí hủy là 1.944.000 ₫. Liên hệ khách sạn để thay đổi ngày lưu trú.</p>
+        <a href="tel:+842353868888" class="link">+84 (0)235 386 8888 · Hỗ trợ 24/7</a>
+      </div>
+    </div>
+
+    <div class="actions-center">
+      <a href="dang-nhap.html" class="btn btn-primary">Xem đặt phòng của tôi</a>
+      <a href="dich-vu.html" class="btn btn-outline">Khám phá dịch vụ</a>
+    </div>
+    <p class="tiny muted center">Chưa nhận được email? Kiểm tra thư rác hoặc <button type="button" class="inline-link" id="resend">Gửi lại xác nhận</button>.</p>
+  </main>
+
+  <script>
+    // Thông báo đã gửi email: hiện khi vào trang và khi bấm gửi lại
+    const toast = document.getElementById('email-toast');
+    let hideTimer;
+    const showToast = () => {
+      toast.classList.add('is-visible');
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => toast.classList.remove('is-visible'), 6000);
+    };
+    toast.querySelector('.toast-close').addEventListener('click', () => toast.classList.remove('is-visible'));
+    document.getElementById('resend').addEventListener('click', showToast);
+    setTimeout(showToast, 300);
+  </script>
+
+  <!-- Chân trang -->
+  <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <p class="footer-logo">an nhiên</p>
+        <p>Một khoảng lặng để bạn tìm lại nhịp điệu của riêng mình, giữa vẻ đẹp mộc mạc của Hội An.</p>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Ghé thăm An Nhiên</h4>
+        <p>18 Nguyễn Du, phường Hội An, Đà Nẵng</p>
+        <a href="tel:+842353868888">+84 (0)235 386 8888</a>
+        <a href="mailto:stay@annhienhoian.vn">stay@annhienhoian.vn</a>
+      </div>
+      <div class="footer-col">
+        <h4>Khám phá</h4>
+        <a href="tim-phong.html">Phòng nghỉ &amp; ưu đãi</a>
+        <a href="dich-vu.html">Ẩm thực &amp; chăm sóc sức khỏe</a>
+        <a href="index.html">Câu chuyện An Nhiên</a>
+      </div>
+      <div class="footer-col">
+        <h4>Thông tin hữu ích</h4>
+        <a href="#">Chính sách đặt &amp; hủy phòng</a>
+        <a href="#">Bảo mật thông tin</a>
+        <p><a href="#">Facebook</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 An Nhiên Hội An. Bảo lưu mọi quyền.</p>
+      <p>Thanh toán an toàn&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;Visa / Mastercard / Chuyển khoản</p>
+    </div>
+  </footer>
+
+</body>
+</html>

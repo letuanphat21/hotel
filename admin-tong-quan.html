@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tổng quan · Quản trị An Nhiên</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin">
+    <!-- Thanh quản trị -->
+    <aside class="admin-sidebar">
+      <a href="admin-tong-quan.html" class="admin-brand">
+        <span>an nhiên</span>
+        <span>KHÔNG GIAN QUẢN TRỊ</span>
+      </a>
+      <nav class="admin-nav">
+        <a href="admin-tong-quan.html" class="active"><img src="assets/icons/admin-dashboard.svg" width="18" height="18" alt="">Tổng quan</a>
+        <a href="admin-dat-phong.html"><img src="assets/icons/admin-calendar.svg" width="18" height="18" alt="">Đặt phòng</a>
+        <a href="admin-phong-gia.html"><img src="assets/icons/admin-bed.svg" width="18" height="18" alt="">Phòng &amp; giá</a>
+        <a href="admin-noi-dung.html"><img src="assets/icons/admin-images.svg" width="18" height="18" alt="">Nội dung</a>
+      </nav>
+      <div class="admin-links">
+        <p class="tiny">KHÁCH SẠN AN NHIÊN</p>
+        <a href="index.html">↗ &nbsp;Xem website</a>
+        <a href="#">⚙ &nbsp;Cài đặt tài khoản</a>
+        <a href="dang-nhap.html">Đăng xuất</a>
+      </div>
+      <div class="admin-help">
+        <p class="small strong">Cần hỗ trợ vận hành?</p>
+        <p class="tiny">Hướng dẫn đặt phòng, cập nhật giá và quản lý nội dung.</p>
+        <a href="#" class="small">Xem hướng dẫn →</a>
+      </div>
+    </aside>
+
+    <!-- Không gian làm việc -->
+    <div class="workspace">
+      <header class="admin-topbar">
+        <p class="small muted">An Nhiên Hội An &nbsp;&nbsp; / &nbsp;&nbsp; Tổng quan</p>
+        <div class="admin-account">
+          <button type="button" class="icon-btn" aria-label="Thông báo"><img src="assets/icons/bell.svg" width="19" height="19" alt=""></button>
+          <span class="small muted">05/11/2026</span>
+          <span class="avatar">ML</span>
+          <div class="admin-user">
+            <p class="small strong">Mai Linh</p>
+            <p class="admin-role">Quản trị viên</p>
+          </div>
+        </div>
+      </header>
+      <main class="admin-content">
+        <div class="admin-title">
+          <div>
+            <h1>Tổng quan</h1>
+            <p class="meta-13">Chào buổi sáng, Linh. Đây là tình hình khách sạn hôm nay.</p>
+          </div>
+          <span class="badge badge-green">Đang hoạt động</span>
+        </div>
+
+        <div class="admin-toolbar">
+          <div class="toolbar-group">
+            <button type="button" class="btn btn-outline btn-sm">Hôm nay · 05/11/2026 ⌄</button>
+            <button type="button" class="btn btn-outline btn-sm">Tháng 11/2026</button>
+          </div>
+          <button type="button" class="btn btn-outline btn-sm">↓ Xuất báo cáo</button>
+        </div>
+
+        <div class="kpis">
+          <div class="panel kpi">
+            <div class="kpi-head"><span>Công suất hôm nay</span><img src="assets/icons/kpi-bed.svg" width="18" height="18" alt=""></div>
+            <p class="kpi-value">78,1%</p>
+            <p class="tiny ok">25 / 32 phòng · ↑ 6,2 điểm so với hôm qua</p>
+          </div>
+          <div class="panel kpi">
+            <div class="kpi-head"><span>Doanh thu tháng 11</span><img src="assets/icons/wallet.svg" width="18" height="18" alt=""></div>
+            <p class="kpi-value">68,4 triệu ₫</p>
+            <p class="tiny ok">↑ 12,4% so với cùng kỳ tháng trước</p>
+          </div>
+          <div class="panel kpi">
+            <div class="kpi-head"><span>Đặt phòng mới hôm nay</span><img src="assets/icons/calendar-check.svg" width="18" height="18" alt=""></div>
+            <p class="kpi-value">12</p>
+            <p class="tiny ok">9 website · 3 tại quầy</p>
+          </div>
+          <div class="panel kpi">
+            <div class="kpi-head"><span>Giá phòng bình quân</span><img src="assets/icons/chart.svg" width="18" height="18" alt=""></div>
+            <p class="kpi-value">1,82 triệu ₫</p>
+            <p class="tiny ok">↑ 4,6% so với hôm qua</p>
+          </div>
+        </div>
+
+        <div class="admin-row">
+          <section class="panel revenue">
+            <div class="panel-head">
+              <h2>Doanh thu tháng 11</h2>
+              <button type="button" class="panel-link">01 – 05/11/2026 ⌄</button>
+            </div>
+            <div class="revenue-total">
+              <strong>68.400.000 ₫</strong>
+              <span class="tiny muted">Doanh thu lưu trú · theo ngày ở</span>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-axis"><span>20 tr</span><span>10 tr</span><span>0</span></div>
+              <div class="bars">
+                <div class="bar-col"><span>9,8</span><div class="bar" style="height:78px"></div><span>01/11</span></div>
+                <div class="bar-col"><span>13,2</span><div class="bar" style="height:106px"></div><span>02/11</span></div>
+                <div class="bar-col"><span>11,6</span><div class="bar" style="height:93px"></div><span>03/11</span></div>
+                <div class="bar-col"><span>17,4</span><div class="bar" style="height:139px"></div><span>04/11</span></div>
+                <div class="bar-col"><span>16,4</span><div class="bar bar-today" style="height:131px"></div><span>05/11</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel room-status">
+            <div class="panel-head">
+              <h2>Tình trạng phòng hôm nay</h2>
+              <a href="admin-phong-gia.html" class="panel-link">Xem sơ đồ →</a>
+            </div>
+            <div class="occupancy">
+              <div class="occupancy-ring">
+                <strong>25/32</strong>
+                <span>phòng đang ở</span>
+              </div>
+              <div class="legend">
+                <div class="line"><span>● Đang ở</span><b>25</b></div>
+                <div class="line"><span>● Sẵn sàng</span><b>4</b></div>
+                <div class="line"><span>● Đang dọn</span><b>2</b></div>
+                <div class="line"><span>● Bảo trì</span><b>1</b></div>
+              </div>
+            </div>
+            <hr class="divider">
+            <div class="arrivals">
+              <div><strong>8</strong><span>Nhận phòng hôm nay</span></div>
+              <div><strong>5</strong><span>Trả phòng hôm nay</span></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="alert">
+          <img src="assets/icons/circle-alert.svg" width="20" height="20" alt="">
+          <strong>3 đặt phòng chờ xác nhận</strong>
+          <span>2 phòng cần dọn trước 14:00</span>
+          <span>1 yêu cầu thay đổi ngày lưu trú</span>
+          <a href="admin-dat-phong.html"><strong>Xử lý ngay →</strong></a>
+        </div>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Đặt phòng gần đây</h2>
+            <a href="admin-dat-phong.html" class="panel-link">Xem tất cả đặt phòng →</a>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th style="width:205px">Mã / Khách hàng</th>
+                  <th style="width:170px">Hạng phòng</th>
+                  <th style="width:185px">Nhận – Trả phòng</th>
+                  <th style="width:140px">Tổng tiền</th>
+                  <th style="width:160px">Đặt phòng</th>
+                  <th>Thanh toán</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-strong">AN26110508<br>Nguyễn Hoàng Minh</td>
+                  <td>Deluxe hướng vườn</td><td>12/11 – 15/11/2026</td><td>5.832.000 ₫</td>
+                  <td class="ok">Đã xác nhận</td><td class="ok">Đã cọc 30%</td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">AN26110507<br>Trần Mai Anh</td>
+                  <td>Suite ban công</td><td>08/11 – 10/11/2026</td><td>6.264.000 ₫</td>
+                  <td class="warn">Chờ xác nhận</td><td class="warn">Chưa thanh toán</td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">AN26110506<br>Lê Quang Huy</td>
+                  <td>Deluxe hai giường</td><td>05/11 – 07/11/2026</td><td>3.888.000 ₫</td>
+                  <td class="ok">Đang ở</td><td class="ok">Đã thanh toán</td>
+                </tr>
+                <tr>
+                  <td class="cell-strong">AN26110505<br>Phạm Thu Hà</td>
+                  <td>Deluxe hướng vườn</td><td>10/11 – 12/11/2026</td><td>3.888.000 ₫</td>
+                  <td class="ok">Đã xác nhận</td><td class="ok">Đã cọc 30%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <p class="admin-foot">An Nhiên · Hệ thống quản lý khách sạn &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Dữ liệu cập nhật lúc 09:41, 05/11/2026</p>
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

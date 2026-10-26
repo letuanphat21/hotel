@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập · An Nhiên Hội An</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-body">
+  <div class="login">
+    <aside class="login-brand">
+      <img class="hero-bg" src="assets/images/dang-nhap.jpg" alt="Sân trong khách sạn An Nhiên">
+      <div class="login-overlay"></div>
+      <a href="index.html" class="login-logo">
+        <span>an nhiên</span>
+        <span>HỘI AN · BOUTIQUE HOTEL</span>
+      </a>
+      <div class="login-greeting">
+        <p class="eyebrow eyebrow-light">CHÀO MỪNG BẠN TRỞ LẠI</p>
+        <h2>Mỗi lần trở về,<br>một lần an nhiên.</h2>
+        <p class="login-lead">Lưu giữ những kỳ nghỉ đáng nhớ và để chúng tôi chăm chút cho hành trình tiếp theo của bạn.</p>
+        <p class="tiny">18 Nguyễn Du, phường Hội An, Đà Nẵng</p>
+      </div>
+    </aside>
+
+    <main class="login-main">
+      <a href="index.html" class="small muted back-link">← Trở về trang chủ</a>
+
+      <form class="login-form" id="login-form" action="index.html">
+        <p class="eyebrow">TÀI KHOẢN AN NHIÊN</p>
+        <h1 class="h-37">Chào mừng bạn trở lại</h1>
+        <p class="body-14">Đăng nhập để quản lý đặt phòng và nhận những đặc quyền dành riêng cho bạn.</p>
+
+        <div class="segmented" role="radiogroup" aria-label="Chọn không gian truy cập">
+          <label><input type="radio" name="role" value="guest" checked><span>Khách hàng</span></label>
+          <label><input type="radio" name="role" value="admin"><span><img src="assets/icons/shield-check-sm.svg" width="16" height="16" alt="">Quản trị viên</span></label>
+        </div>
+
+        <label class="field">
+          <span class="field-label">Email *</span>
+          <span class="field-input">
+            <input type="email" value="minh.nguyen@gmail.com" autocomplete="email" required>
+            <img src="assets/icons/mail-input.svg" width="18" height="18" alt="">
+          </span>
+        </label>
+        <label class="field">
+          <span class="field-label">Mật khẩu *</span>
+          <span class="field-input">
+            <input type="password" id="password" value="matkhau12345" autocomplete="current-password" required>
+            <button type="button" class="icon-btn" id="toggle-password" aria-label="Hiện mật khẩu"><img src="assets/icons/eye-off.svg" width="18" height="18" alt=""></button>
+          </span>
+        </label>
+
+        <div class="login-options">
+          <label class="check small"><input type="checkbox" checked> Ghi nhớ đăng nhập</label>
+          <a href="#" class="small medium">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Đăng nhập →</button>
+        <p class="text-13 center"><span class="muted">Chưa có tài khoản?</span> <a href="#" class="strong">Đăng ký ngay</a></p>
+        <hr class="divider">
+
+        <div class="staff-box">
+          <p class="small strong staff-title"><img src="assets/icons/shield-check.svg" width="18" height="18" alt="">Bạn là nhân viên An Nhiên?</p>
+          <p class="small muted">Chọn “Quản trị viên” và sử dụng tài khoản công việc được cấp. Tài khoản khách hàng không có quyền truy cập khu quản trị.</p>
+          <button type="button" class="small strong" id="to-admin">Chuyển sang đăng nhập quản trị →</button>
+        </div>
+
+        <p class="tiny muted center">Bạn vẫn có thể đặt phòng mà không cần tài khoản.<br><a href="#">Chính sách bảo mật</a> · <a href="#">Điều khoản sử dụng</a></p>
+      </form>
+
+      <p class="login-foot">© 2026 An Nhiên Hội An · Hỗ trợ: +84 (0)235 386 8888</p>
+    </main>
+  </div>
+
+  <script>
+    // Chọn vai trò: quản trị viên được chuyển đến trang tổng quan
+    const form = document.getElementById('login-form');
+    const setRole = (role) => {
+      form.action = role === 'admin' ? 'admin-tong-quan.html' : 'index.html';
+    };
+    form.querySelectorAll('input[name="role"]').forEach((el) => el.addEventListener('change', () => setRole(el.value)));
+    document.getElementById('to-admin').addEventListener('click', () => {
+      form.querySelector('input[value="admin"]').checked = true;
+      setRole('admin');
+    });
+    document.getElementById('toggle-password').addEventListener('click', (e) => {
+      const input = document.getElementById('password');
+      input.type = input.type === 'password' ? 'text' : 'password';
+      e.currentTarget.setAttribute('aria-label', input.type === 'password' ? 'Hiện mật khẩu' : 'Ẩn mật khẩu');
+    });
+  </script>
+
+</body>
+</html>
