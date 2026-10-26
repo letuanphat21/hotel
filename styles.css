@@ -96,7 +96,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--green-800
 .nav-links { display: flex; align-items: center; gap: 28px; font-size: 13px; color: var(--muted); }
 .nav-links a:not(.btn):hover { color: var(--green-800); }
 .nav-links .active { color: var(--green-800); font-weight: 600; }
-.nav-links .nav-login { color: var(--green-700); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -543,33 +542,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--green-800
 .map-note { position: absolute; left: 14px; top: 258px; padding: 4px; background: #fff; font-size: 9px; color: var(--muted); }
 .directions-text { flex: 1; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
 
-/* ---------- Đăng nhập ---------- */
-.login { display: flex; min-height: 100vh; }
-.login-brand { position: relative; width: 690px; flex-shrink: 0; min-height: 1000px; padding: 64px; overflow: hidden; color: var(--cream); }
-.login-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(16, 47, 40, .2), rgba(16, 47, 40, .9)); }
-.login-logo { position: relative; display: flex; flex-direction: column; gap: 5px; line-height: normal; }
-.login-logo span:first-child { font-family: var(--serif); font-size: 40px; color: var(--cream); }
-.login-logo span:last-child { font-size: 11px; font-weight: 600; color: var(--mint); }
-.login-greeting { position: absolute; left: 64px; top: 650px; width: 550px; display: flex; flex-direction: column; gap: 22px; }
-.login-greeting h2 { font-size: 43px; color: var(--cream); }
-.login-lead { font-size: 15px; }
-.login-greeting .tiny { color: var(--mint); }
-.login-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 32px; padding: 48px 96px 40px; }
-.back-link:hover { color: var(--green-800); }
-.login-form { display: flex; flex-direction: column; gap: 22px; padding-top: 35px; }
-.h-37 { font-size: 37px; }
-.segmented { display: flex; gap: 5px; padding: 5px; background: var(--sand); border-radius: var(--radius); }
-.segmented label { flex: 1; cursor: pointer; }
-.segmented input { position: absolute; opacity: 0; pointer-events: none; }
-.segmented span { display: flex; align-items: center; justify-content: center; gap: 8px; height: 42px; border-radius: var(--radius); font-size: 13px; }
-.segmented input:checked + span { background: #fff; font-weight: 600; }
-.segmented input:focus-visible + span { outline: 2px solid var(--green-800); }
 .icon-btn { display: flex; padding: 0; }
-.login-options { display: flex; justify-content: space-between; align-items: center; }
 .medium { font-weight: 500; }
-.staff-box { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; padding: 18px; background: var(--ok-bg); border-radius: var(--radius); }
-.staff-title { display: flex; align-items: center; gap: 8px; }
-.login-foot { font-size: 10px; color: var(--muted); }
 
 /* =========================================================
    Quản trị
@@ -771,8 +745,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--green-800
   .gallery-main, .feature > img { width: 58%; }
   .map { width: 60%; }
   .contact-info { width: 360px; }
-  .login-brand { width: 45%; }
-  .login-main { padding: 48px 56px 40px; }
   .kpis { grid-template-columns: repeat(2, 1fr); }
   .admin-row, .library { flex-direction: column; align-items: stretch; }
   .revenue, .booking-list, .edit-type, .library-grid-wrap, .service-table { width: 100%; }
@@ -793,10 +765,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--green-800
   .stepper { gap: 12px; padding: 0 12px; }
   .stepper li:not(:last-child)::after { width: 24px; }
   .stepper li { font-size: 11px; }
-  .login { flex-direction: column; }
-  .login-brand { width: 100%; min-height: 360px; }
-  .login-greeting { position: relative; left: 0; top: 0; width: auto; margin-top: 120px; }
-  .login-main { padding: 32px var(--gutter); }
   .admin { flex-direction: column; }
   .admin-sidebar { width: 100%; min-height: 0; gap: 16px; padding: 20px 16px; }
   .admin-nav { flex-direction: row; overflow-x: auto; }
